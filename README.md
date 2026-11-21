@@ -26,34 +26,34 @@ Ordinary policyholders face severe asymmetric disadvantages:
 
 ## 🚀 Key Modules & Capabilities
 
-### 1. Rejection Decoder & Appeal Builder
+### 1. Rejection Decoder & Appeal Builder (Tab 1)
 - **Inputs**: Policy Type (*Health / Term Life / Motor / Gadget*), Disputed Claim Amount (₹), Insurer / TPA Name, Policy/Claim Number, and Rejection notice text.
 - **Dynamic Indian Currency & Jurisdiction Engine**: Real-time conversion into Lakhs/Crores, auto-evaluating eligibility for the **Insurance Ombudsman (pecuniary limit: ₹50 Lakhs)** or NCDRC Consumer Commission.
 - **3-Step Analysis Pipeline**:
-  - **(a) Plain-English Denial Audit**: Evaluates grounds like *Room-Rent Sub-limit / Proportionate Deduction*, *Section 45 Non-Disclosure*, *Procedural Delay in Intimation*, or *Medical Necessity*. Assigns a Contestability Score (*High / Medium / Low*) and compares *"What the Insurer Alleged"* vs. *"What IRDAI / Indian Law Actually Says"*.
+  - **(a) Plain-English Denial Audit**: Evaluates grounds like *Room-Rent Sub-limit / Proportionate Deduction*, *Section 45 Non-Disclosure*, *Missing Itemized Bills / Documentation Gaps*, or *Medical Necessity*. Assigns a Contestability Rating (*High / Medium / Low*) and compares *"What the Insurer Alleged"* vs. *"What IRDAI / Indian Law Actually Says"*.
   - **(b) Gap & Loophole Checklist**: Interactive counter-evidence checklist specifying exact medical records, hospital tariff certificates, doctor necessity attestations, and 3-year renewal records required to overturn the denial.
   - **(c) Statutory Escalation & Appeal Letter**: Generates a professional representation addressed to the **Grievance Redressal Officer (GRO)** of the insurer, invoking IRDAI’s mandatory 15-day redressal timeline, Section 45, and giving formal notice of escalation to the **IRDAI Bima Bharosa Portal** and the **Insurance Ombudsman**. Includes a 1-click **"Copy Appeal Letter"** button (with toast notification) and `.TXT` export.
 
-### 2. Policy Fine-Print X-Ray
+### 2. Policy Fine-Print X-Ray (Tab 2)
 - **Inputs**: Policy brochure text, Key Feature Document (KFD) excerpt, or agent WhatsApp pitch.
 - **Outputs**:
-  - **(a) Protection vs. Money-Back Reality Check**: Contrasts pure risk protection against investment schemes, calculating the real **IRR (~5%)** against Public Provident Fund (7.1%) and Index Funds (12%), demonstrating the superiority of *Pure Term + Mutual Funds*.
-  - **(b) Hidden Trap Scanner**: Tags clauses with visual badges (**Safe**, **Watch Out**, **High Trap**) covering 1% room-rent caps, 20% senior citizen co-payment, 24-month specific illness waiting periods, modern treatment limits, and non-payable consumables haircuts.
+  - **(a) Protection vs. Money-Back Reality Check**: Contrasts pure risk protection against investment schemes, calculating the real **IRR (~4.9%)** against Public Provident Fund (7.1%) and Index Funds (12%), demonstrating the financial superiority of *Pure Term + Mutual Funds*.
+  - **(b) Hidden Trap Scanner**: Tags clauses with visual badges (**Safe**, **Watch Out**, **High Trap**) covering 1% room-rent caps, 20% senior citizen co-payment, 24-month specific illness waiting periods, modern treatment limits, surrender charges, and non-payable consumables haircuts.
   - **(c) Disclosure & Paperwork Shield**: Guides policyholders on which medical markers to declare upfront to guarantee future Section 45 immunity, plus a checklist of permanent records to retain for 10+ years.
 
 ### 3. Dual Execution Modes
 - **Instant Demo Mode (Default, Zero API Key Needed)**:
   - Runs 100% locally with pre-engineered Indian insurance regulatory intelligence.
-  - Includes **4 one-click realistic Indian presets**:
-    1. *Cataract & Room-Rent Cap Breach with 68% Proportionate Deduction (₹3.85 Lakhs).*
-    2. *Pre-Existing Disease (PED) Repudiation for Cardiac Stenting under Section 45 (₹6.50 Lakhs).*
-    3. *Motor Accident Claim: Delayed FIR & 8-Day Intimation Delay (₹1.95 Lakhs).*
-    4. *Guaranteed Income Endowment / Money-Back Pitch Reality Check.*
+  - Features a **Master 1-Click Preset Showcase** with **4 accessible Indian presets** that run end-to-end with the animated 3-stage progress bar:
+    1. **Preset 1**: *Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition (₹2,40,000)* [Cardiac stent repudiation past 3-year contestability].
+    2. **Preset 2**: *Partial Settlement — Room-Rent Sub-Limit & Non-Payable Items Deduction (₹1,15,000)* [1% room cap & consumables haircut].
+    3. **Preset 3**: *Claim Rejected — Missing Itemized Bill & Discharge Summary Gap (₹85,000)* [Emergency dengue hospitalization file closure].
+    4. **Preset 4**: *Policy Brochure Audit — "Tax-Saver + Guaranteed Return + Cover" Pitch* [Exposed sub-inflation 4.9% real IRR & underinsurance].
   - Features an animated **3-stage progress pipeline** tracking statutory analysis stages.
 - **Live Gemini AI Mode (Optional BYOK)**:
   - Enter your personal Google Gemini API key to query `gemini-2.5-flash` directly.
-  - Stored strictly in browser `localStorage`, never sent to any third-party server.
-  - Automatic error handling with seamless fallback to the local engine if rate-limited or offline.
+  - Stored strictly in browser `localStorage` (`claimsetu_gemini_key`), never sent to any third-party server.
+  - Automatic error handling with seamless fallback to the local engine if rate-limited, empty, or offline.
 
 ### 4. Transparent Prompt & Legal Architecture
 - Expandable tab showcasing system prompt design, regulatory grounding table, and zero-telemetry client-side privacy architecture.
@@ -85,8 +85,9 @@ ClaimSetu/
 ```
 
 - **Zero NPM / Node dependencies** (No `node_modules`, no webpack/vite build step).
-- **Total Payload Size**: ~65 KB (well below the 10 MB limit).
+- **Total Payload Size**: ~150 KB (well below the 10 MB limit).
 - **100% Client-Side Privacy**: Runs in the browser. Medical records and API keys never touch any intermediary server.
+- **Responsive & No Horizontal Overflow**: Fits cleanly on mobile, tablet, and desktop viewports without clipping or horizontal scrollbars.
 
 ---
 

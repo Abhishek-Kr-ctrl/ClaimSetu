@@ -105,96 +105,106 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 3. REALISTIC INDIAN PRESET DATA
+  // 3. THE 4 INDIAN PRESETS (EXACT SCENARIOS)
   // ==========================================
   const PRESETS = {
-    // Preset 1: Cataract & Room-Rent Cap Breach with Proportionate Deduction
-    'preset-roomrent': {
+    // Preset 1: Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition (₹2,40,000)
+    'preset-1': {
+      tab: 'rejection',
+      name: 'Preset 1: Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition',
       policyType: 'Health',
-      claimAmount: 385000,
-      insurerName: 'Star Health & Allied Insurance',
-      policyNumber: 'P/161114/01/2023/004812',
-      rejectionDate: '2026-02-14',
-      rejectionText: `RE: Repudiation & Proportionate Deduction Advice for Claim Ref: CIR/2026/894120
+      claimAmount: 240000,
+      insurerName: 'Star Health & Allied Insurance Co.',
+      policyNumber: 'SH/2021/4819028/00/000',
+      rejectionDate: '2026-02-12',
+      rejectionText: `RE: Repudiation Advice for Claim Ref No: CIR/2026/782194
+Policy No: SH/2021/4819028/00/000 | Insured Patient: Abhishek Kumar
+Hospital: Max Super Speciality Hospital, Saket, New Delhi
+Disputed Claim Amount: Rs. 2,40,000/- (Coronary Angiography & Emergency Stenting)
 
 Dear Policyholder,
-With reference to your hospitalization at Fortis Hospital, New Delhi for Cataract Surgery and Bilateral Phacoemulsification from 10-Jan-2026 to 12-Jan-2026 with total bill of Rs. 3,85,000/-.
-
-Upon scrutiny by our medical claims panel:
-1. As per Policy Clause 3.2, your room rent eligibility is capped at 1% of Sum Insured (1% of Rs. 3,00,000 = Rs. 3,000/day). The insured opted for Single Deluxe Room billed at Rs. 9,500/day.
-2. In terms of Clause 3.2(b), all associated medical expenses including Surgeon Fees (Rs. 1,20,000), Anesthetist Fees (Rs. 35,000), Operation Theater Charges (Rs. 65,000), and Diagnostic Investigation Charges have been subjected to PROPORTIONATE DEDUCTION of 68.4%.
-3. Out of total bill of Rs. 3,85,000/-, only Rs. 1,21,000/- is approved. The deduction of Rs. 2,64,000/- is repudiated and stands non-payable.
-4. Additionally, Premium Monofocal/Toric Foldable IOL lens cost has been restricted to tariff cap of Rs. 25,000 under Clause 4.8.`
+We refer to your cashless/reimbursement claim for hospitalization from 14-Jan-2026 to 17-Jan-2026.
+Upon clinical scrutiny of indoor case papers (ICP) and treating physician history sheets:
+1. Patient was diagnosed with acute coronary syndrome and underwent drug-eluting stenting.
+2. The initial emergency admission notes record a long-standing history of Essential Hypertension and Type 2 Diabetes for approximately 4 to 5 years.
+3. In your initial policy proposal form dated 10-Aug-2021, the proposer declared 'NO' to hypertension and diabetes queries.
+4. As per Section 4.1 (Non-disclosure of Material Facts / Pre-Existing Condition) and Section 45 of Insurance Act, the company has repudiated the claim in toto.
+5. Consequently, the claim of Rs. 2,40,000/- is rejected and policy coverage stands terminated ab-initio without refund of premium.`
     },
 
-    // Preset 2: Cardiac Stent & Pre-Existing Disease (PED) Repudiation past 3 years (Section 45 Protection)
-    'preset-ped': {
+    // Preset 2: Partial Settlement — Room-Rent Sub-Limit & Non-Payable Items Deduction (₹1,15,000)
+    'preset-2': {
+      tab: 'rejection',
+      name: 'Preset 2: Partial Settlement — Room-Rent Sub-Limit & Non-Payable Items Deduction',
       policyType: 'Health',
-      claimAmount: 650000,
-      insurerName: 'HDFC ERGO General Insurance',
-      policyNumber: '2819/2021/883901/00/000',
-      rejectionDate: '2026-01-28',
-      rejectionText: `RE: Repudiation Notice under Section 4.1 (Non-Disclosure of Material Facts) — Claim ID: HD/MED/2026/33918
+      claimAmount: 115000,
+      insurerName: 'Care Health Insurance Ltd.',
+      policyNumber: 'CHI/FLOATER/2023/889104',
+      rejectionDate: '2026-01-29',
+      rejectionText: `RE: Claim Settlement Voucher & Deduction Breakdown — Claim ID: 90284711
+Hospital: Fortis Memorial Research Institute, Gurugram
+Total Hospital Bill: Rs. 2,80,000/- | Approved: Rs. 1,65,000/- | Disallowed / Deducted: Rs. 1,15,000/-
 
-Dear Sir/Madam,
-We refer to your reimbursement claim of Rs. 6,50,000/- submitted for Emergency Coronary Angioplasty with Drug Eluting Stents (DES) at Apollo Hospitals, Chennai.
-
-Findings of TPA Investigation:
-1. Patient's indoor case records (ICP) mention a past history of Essential Hypertension for 6 years and Type-2 Diabetes Mellitus on oral hypoglycemics.
-2. In the initial proposal form dated 14-Aug-2021, the proposer marked 'NO' to the query: "Have you ever suffered from or taken medication for high blood pressure or diabetes?"
-3. Under the doctrine of Utmost Good Faith (Uberrima Fides) and Policy Exclusion Clause 4.1 (Non-disclosure of Material Facts / Pre-Existing Disease), the insurer has repudiated the claim in toto.
-4. Policy is hereby canceled ab-initio and no refund of premium is admissible.`
+Dear Insured,
+Please note the settlement deduction summary for your Laparoscopic Cholecystectomy claim:
+1. Room Rent Eligibility Breach: Your Sum Insured is Rs. 3,00,000/- with a 1% per day room rent cap (Rs. 3,00,000 x 1% = Rs. 3,000/day). The insured occupied a Single Executive Room charged at Rs. 8,500/day.
+2. In terms of Clause 3.2(c), a Proportionate Deduction of 64.7% has been applied to all associated surgical and medical charges:
+   - Surgeon Fees (Billed: Rs. 65,000 -> Slashed by Rs. 42,000)
+   - Operation Theater & Anesthesia (Billed: Rs. 45,000 -> Slashed by Rs. 29,100)
+   - Diagnostic Ultrasound & Blood Tests (Billed: Rs. 18,000 -> Slashed by Rs. 11,600)
+3. Non-Medical Consumables Deduction: Rs. 32,300 disallowed under List I (gloves, PPE kits, cannula, syringes, disinfectant wipes, bio-hazard bags).
+Total deduction of Rs. 1,15,000/- is disallowed and non-payable as per policy terms.`
     },
 
-    // Preset 3: Motor Accident Claim - Delayed FIR & Delayed Intimation
-    'preset-motor': {
-      policyType: 'Motor',
-      claimAmount: 195000,
-      insurerName: 'ICICI Lombard General Insurance',
-      policyNumber: '3001/MI-9923841/00/000',
-      rejectionDate: '2026-02-02',
-      rejectionText: `RE: Repudiation of Own Damage Motor Claim — Claim No: MOT-2026-449102
+    // Preset 3: Claim Rejected — Missing Itemized Bill & Discharge Summary Gap (₹85,000)
+    'preset-3': {
+      tab: 'rejection',
+      name: 'Preset 3: Claim Rejected — Missing Itemized Bill & Discharge Summary Gap',
+      policyType: 'Health',
+      claimAmount: 85000,
+      insurerName: 'Niva Bupa Health Insurance Co.',
+      policyNumber: 'NB/MED/2024/662810',
+      rejectionDate: '2026-02-05',
+      rejectionText: `RE: Closure & Repudiation of Reimbursement Claim — Ref No: CLM-2026-339182
+Patient: Abhishek Kumar | Ailment: Severe Dengue with Thrombocytopenia
+Hospital: City Care Hospital, Noida | Disputed Claim Amount: Rs. 85,000/-
 
-Dear Vehicle Owner (Reg No: DL-3C-AZ-4419),
-With reference to your claim for accidental damage repair amounting to Rs. 1,95,000/- at Authorized Hyundai Workshop:
-
-Grounds for Repudiation:
-1. The accident occurred on 12-Jan-2026 on NH-48 near Gurugram. However, claim intimation was given to the insurer on 20-Jan-2026 (a delay of 8 days).
-2. General Condition 1 of the Private Car Package Policy stipulates: "Notice shall be given in writing to the Company immediately upon the occurrence of any accidental loss or damage."
-3. Furthermore, the Police General Diary (GD) entry was registered 6 days post accident.
-4. Due to the breach of Condition 1 (delayed intimation and delayed police reporting deprived insurer of opportunity to inspect vehicle at spot), your claim is repudiated in its entirety.`
+Dear Policyholder,
+We refer to your reimbursement claim documents submitted on 22-Jan-2026.
+Deficiencies noted during audit:
+1. Hospital bill summary reflects aggregate Pharmacy and Injection charges of Rs. 38,500 without detailed batch-wise itemized cash memos.
+2. Discharge summary lacks hourly vitals charting and Indoor Case Papers (ICP) showing daily platelet transfusion monitoring.
+3. As the requested original documents were not provided within 15 days of query letter, your claim is repudiated under Clause 6.1 (Documentation Default & Incomplete Claim Submission).
+4. File is closed as 'No Claim' in our records.`
     },
 
-    // Preset 4 (X-Ray): Money-Back & Endowment Agent Pitch
-    'preset-endowment': {
+    // Preset 4: Policy Brochure Audit — "Tax-Saver + Guaranteed Return + Cover" Pitch
+    'preset-4': {
+      tab: 'xray',
+      name: 'Preset 4: Policy Brochure Audit — Tax-Saver + Guaranteed Return + Cover Pitch',
       policyType: 'Life-Endowment',
-      sumInsured: 'Annual Premium: ₹1,00,000 | Sum Assured: ₹10,00,000',
-      text: `SPECIAL FESTIVE AGENT BROCHURE — "Jeevan Suraksha Maha-Dhan Yojana"
-Guaranteed 250% Returns + Triple Tax Benefits under 80C & 10(10D)!
+      sumInsured: 'Annual Deposit: ₹1,00,000 for 10 yrs | Advertised Maturity: ₹25,00,000',
+      text: `EXCLUSIVE AGENT BROCHURE — "Jeevan Dhan Samriddhi Plan"
+The Ultimate 3-in-1 Financial Shield: Guaranteed Tax-Free Income + High Returns + Sovereign Life Cover!
 
-Plan Highlights:
-• Pay just Rs. 1,00,000/- yearly for 10 years (Total Deposit: Rs. 10 Lakhs).
-• Premium Holiday: Relax from Year 11 to Year 14.
-• Guaranteed Money-Back: Receive Rs. 1,50,000/- every single year from Year 15 to Year 25 (11 payouts totaling Rs. 16.5 Lakhs).
-• Bumper Maturity Bonus: On Year 25, receive Lump-Sum Guaranteed Maturity of Rs. 15,00,000/-.
-• Total Guaranteed Payout: Rs. 31,50,000/- (More than 3 TIMES your deposit!).
-• Life Cover: ₹10,00,000 in-built life cover throughout the tenure of 25 years.
-• Absolute Safety, Sovereign Backing & Zero Market Risk.`
-    },
-
-    // Preset 5 (X-Ray): Low-Cost Mediclaim with Hidden Sub-limits
-    'preset-mediclaim-traps': {
-      policyType: 'Health',
-      sumInsured: '₹5,00,000 Floater (Self + Spouse)',
-      text: `Affordable Family Health Shield Plan — ₹5,00,000 Sum Insured at just ₹6,200/year!
-Policy Schedule Key Features & Conditions:
-1. Room Rent & Nursing Charges: Capped at 1% of Sum Insured per day for Normal Room, and 2% of Sum Insured per day for ICU. If insured occupies higher category room, all associated medical expenses will be proportionately reduced.
-2. Co-Payment: A mandatory 20% co-payment applies to each and every claim for members aged 55 years and above.
-3. Specific Illness Waiting Period: 24 months for Cataract, Hernia, Hysterectomy, Calculus diseases, Joint Replacement. Cataract payout capped at Rs. 24,000 per eye.
-4. Modern Treatment Methods: Robotic surgery, Stem cell therapy, deep brain stimulation capped at 25% of Sum Insured.
-5. Consumables & Non-Medical Items: Gloves, PPE kits, oxygen masks, syringes, thermometer (List I, II, III, IV) are permanently non-payable.`
+Plan Features:
+1. Pay only Rs. 1,00,000/- per year for 10 years (Total Deposit: Rs. 10,00,000).
+2. Enjoy 5-year Premium Holiday from Year 11 to Year 15.
+3. Guaranteed Survival Benefit: Receive Rs. 1,25,000/- every year from Year 16 to Year 24 (9 annual guaranteed payouts = Rs. 11,25,000).
+4. Bumper Maturity Bonus: On Year 25, receive Guaranteed Maturity Lump-sum of Rs. 15,00,000/-.
+5. Total Guaranteed Cash Payout: Rs. 26,25,000/- (More than 2.6x your investment!).
+6. Tax Benefits: 100% Tax-free under Section 80C on deposit and Section 10(10D) on maturity payouts.
+7. In-built Life Cover: Rs. 10,00,000 life insurance protection for the entire 25-year duration.
+8. Zero stock market risk, guaranteed peace of mind for your family's future.`
     }
   };
+
+  // Aliases for any legacy or alternative dataset attributes
+  PRESETS['preset-ped'] = PRESETS['preset-1'];
+  PRESETS['preset-roomrent'] = PRESETS['preset-2'];
+  PRESETS['preset-motor'] = PRESETS['preset-3'];
+  PRESETS['preset-endowment'] = PRESETS['preset-4'];
+  PRESETS['preset-mediclaim-traps'] = PRESETS['preset-2'];
 
   // ==========================================
   // 4. HELPER UTILITIES
@@ -324,26 +334,31 @@ Policy Schedule Key Features & Conditions:
   // ==========================================
   // 6. TAB SWITCHING
   // ==========================================
-  function initTabs() {
+  function switchTab(targetTabName) {
     const tabs = [
       { btn: elements.tabBtnRejection, panel: elements.tabPanelRejection, name: 'rejection' },
       { btn: elements.tabBtnXray, panel: elements.tabPanelXray, name: 'xray' },
       { btn: elements.tabBtnArchitecture, panel: elements.tabPanelArchitecture, name: 'architecture' }
     ];
 
-    tabs.forEach(tab => {
-      tab.btn.addEventListener('click', () => {
-        tabs.forEach(t => {
-          t.btn.classList.remove('active');
-          t.btn.setAttribute('aria-selected', 'false');
-          t.panel.classList.add('hidden');
-        });
-        tab.btn.classList.add('active');
-        tab.btn.setAttribute('aria-selected', 'true');
-        tab.panel.classList.remove('hidden');
-        state.activeTab = tab.name;
-      });
+    tabs.forEach(t => {
+      if (t.name === targetTabName) {
+        t.btn.classList.add('active');
+        t.btn.setAttribute('aria-selected', 'true');
+        t.panel.classList.remove('hidden');
+      } else {
+        t.btn.classList.remove('active');
+        t.btn.setAttribute('aria-selected', 'false');
+        t.panel.classList.add('hidden');
+      }
     });
+    state.activeTab = targetTabName;
+  }
+
+  function initTabs() {
+    elements.tabBtnRejection.addEventListener('click', () => switchTab('rejection'));
+    elements.tabBtnXray.addEventListener('click', () => switchTab('xray'));
+    elements.tabBtnArchitecture.addEventListener('click', () => switchTab('architecture'));
 
     // Accordions in Architecture tab
     document.querySelectorAll('.accordion-header').forEach(header => {
@@ -356,55 +371,7 @@ Policy Schedule Key Features & Conditions:
   }
 
   // ==========================================
-  // 7. PRESET LOADERS
-  // ==========================================
-  function initPresets() {
-    // Tab 1 Presets
-    document.querySelectorAll('[data-preset]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.dataset.preset;
-        const preset = PRESETS[key];
-        if (!preset) return;
-
-        elements.policyType.value = preset.policyType;
-        elements.claimAmount.value = preset.claimAmount;
-        elements.insurerName.value = preset.insurerName;
-        elements.policyNumber.value = preset.policyNumber;
-        elements.rejectionDate.value = preset.rejectionDate;
-        elements.rejectionText.value = preset.rejectionText;
-
-        updateAmountInWords();
-        updateCharCount(elements.rejectionText, elements.rejectionCharCount);
-
-        // Highlight preset button briefly
-        btn.classList.add('active-preset');
-        setTimeout(() => btn.classList.remove('active-preset'), 600);
-
-        showToast(`Loaded Preset: ${btn.querySelector('.preset-title').textContent}`, 'info');
-        elements.formRejection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      });
-    });
-
-    // Tab 2 Presets
-    document.querySelectorAll('[data-xray-preset]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.dataset.xrayPreset;
-        const preset = PRESETS[key];
-        if (!preset) return;
-
-        elements.xrayPolicyType.value = preset.policyType;
-        elements.xraySumInsured.value = preset.sumInsured;
-        elements.xrayText.value = preset.text;
-
-        updateCharCount(elements.xrayText, elements.xrayCharCount);
-        showToast(`Loaded Preset: ${btn.querySelector('.preset-title').textContent}`, 'info');
-        elements.formXray.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      });
-    });
-  }
-
-  // ==========================================
-  // 8. PROGRESS ANIMATOR (3-STAGE PIPELINE)
+  // 7. PROGRESS ANIMATOR (3-STAGE PIPELINE)
   // ==========================================
   async function runProgressPipeline(container, titleElem, barElem, stagePrefix, stages, callback) {
     container.classList.remove('hidden');
@@ -418,33 +385,33 @@ Policy Schedule Key Features & Conditions:
 
     // Reset stages
     stageItems.forEach(el => {
-      el.className = 'stage-item';
+      if (el) el.className = 'stage-item';
     });
-    barElem.style.width = '5%';
+    barElem.style.width = '6%';
 
     // Stage 1
-    stageItems[0].className = 'stage-item active';
+    if (stageItems[0]) stageItems[0].className = 'stage-item active';
     titleElem.textContent = stages[0];
-    barElem.style.width = '33%';
+    barElem.style.width = '35%';
     await new Promise(r => setTimeout(r, 650));
 
     // Stage 2
-    stageItems[0].className = 'stage-item completed';
-    stageItems[1].className = 'stage-item active';
+    if (stageItems[0]) stageItems[0].className = 'stage-item completed';
+    if (stageItems[1]) stageItems[1].className = 'stage-item active';
     titleElem.textContent = stages[1];
-    barElem.style.width = '68%';
+    barElem.style.width = '70%';
     await new Promise(r => setTimeout(r, 750));
 
     // Stage 3
-    stageItems[1].className = 'stage-item completed';
-    stageItems[2].className = 'stage-item active';
+    if (stageItems[1]) stageItems[1].className = 'stage-item completed';
+    if (stageItems[2]) stageItems[2].className = 'stage-item active';
     titleElem.textContent = stages[2];
     barElem.style.width = '94%';
 
     try {
       const data = await callback();
       barElem.style.width = '100%';
-      stageItems[2].className = 'stage-item completed';
+      if (stageItems[2]) stageItems[2].className = 'stage-item completed';
       await new Promise(r => setTimeout(r, 350));
       container.classList.add('hidden');
       return data;
@@ -455,15 +422,15 @@ Policy Schedule Key Features & Conditions:
   }
 
   // ==========================================
-  // 9. INSTANT DEMO REJECTION ENGINE (RULE-BASED AUDIT)
+  // 8. INSTANT DEMO REJECTION ENGINE (RULE-BASED AUDIT)
   // ==========================================
   function generateDemoRejectionAnalysis(policyType, claimAmount, insurer, policyNo, rejectionDate, text) {
     const lower = text.toLowerCase();
-    const amountVal = parseFloat(claimAmount) || 250000;
+    const amountVal = parseFloat(claimAmount) || 240000;
     const formattedAmount = formatIndianCurrency(amountVal);
     const currentDate = new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
     const targetInsurer = insurer || 'The Insurer / Third Party Administrator (TPA)';
-    const targetPolicyNo = policyNo || 'POL/CLAIM/' + Math.floor(100000 + Math.random() * 900000);
+    const targetPolicyNo = policyNo || 'SH/2021/4819028/00/000';
 
     let primaryGround = 'Policy Clause Exclusion & Documentation Dispute';
     let contestabilityScore = 'High Contestability';
@@ -474,114 +441,116 @@ Policy Schedule Key Features & Conditions:
     let rationale = '';
     let checklist = [];
 
-    // DETECTION LOGIC BASED ON TEXT PATTERNS
-    if (lower.includes('room') || lower.includes('proportionate') || lower.includes('capping') || lower.includes('tariff') || lower.includes('cataract')) {
-      primaryGround = 'Room-Rent Sub-Limit & Proportionate Deduction Overreach';
-      contestabilityScore = 'High (85% Recovery Potential)';
-      contestabilityClass = 'contestability-high';
-      legalShield = 'IRDAI Guidelines on Proportionate Deduction & Ombudsman Precedents';
-
-      allegations = [
-        'Insurer applied proportionate deduction on the entire medical bill because room rent exceeded 1% of Sum Insured.',
-        'Doctor/Surgeon fee, Anesthesia charges, and Operation Theater charges were slashed proportionately by over 50%.',
-        'Implant / Lens cost restricted arbitrarily below the actual hospital billing tariff.'
-      ];
-
-      counters = [
-        'Under IRDAI circulars, proportionate deductions cannot be levied on fixed charges like ICU tariffs, medicines, diagnostic investigations, or medical implants.',
-        'Multiple Insurance Ombudsman awards (e.g., Delhi & Mumbai Ombudsmen) have repeatedly held that doctor consultation fees cannot be proportionately cut unless hospital explicitly tiers doctor fees strictly to room categories.',
-        'The insurer must provide the hospital tariff sheet proving that surgeon fees were variable based strictly on room category before slashing.'
-      ];
-
-      rationale = 'Insurers routinely misapply proportionate deduction as a blanket haircut across the entire bill. However, under settled Insurance Ombudsman jurisprudence and IRDAI guidelines, only room rent and nursing charges can be capped, while medicines, diagnostics, and essential surgery costs must be reimbursed at actuals.';
-
-      checklist = [
-        { title: 'Itemized Hospital Tariff Schedule', desc: 'Obtain a signed certificate from the hospital billing desk proving surgeon & OT charges were standard and not tied to room class.' },
-        { title: 'Treating Doctor Medical Necessity Note', desc: 'Certificate from the operating surgeon stating that admission and procedures were medically necessary.' },
-        { title: 'Itemized Pharmacy & Implant Invoices', desc: 'Detailed bills with batch numbers for IOL lens/implants and medicines to refute proportionate deductions.' },
-        { title: 'Copy of Policy Schedule with Room Rent Clause', desc: 'Highlighting absence of explicit notice regarding proportionate deduction on non-room heads.' }
-      ];
-
-    } else if (lower.includes('non-disclosure') || lower.includes('pre-existing') || lower.includes('ped') || lower.includes('hypertension') || lower.includes('diabetes') || lower.includes('section 45')) {
-      primaryGround = 'Non-Disclosure Repudiation vs. Section 45 3-Year Indisputability';
-      contestabilityScore = 'Very High (Sec 45 Absolute Shield)';
+    // SCENARIO 1: Non-Disclosure / Pre-Existing Disease (Section 45 Protection)
+    if (lower.includes('non-disclosure') || lower.includes('pre-existing') || lower.includes('ped') || lower.includes('hypertension') || lower.includes('diabetes') || lower.includes('section 45') || lower.includes('stent')) {
+      primaryGround = 'Repudiation for Alleged Pre-Existing Condition (§ 45 Statutory Immunity Breach)';
+      contestabilityScore = 'Very High (100% Statutory Protection under § 45)';
       contestabilityClass = 'contestability-high';
       legalShield = 'Section 45 of Insurance Act 1938 & IRDAI 36-Month Moratorium Norms';
 
       allegations = [
-        'Insurer claimed non-disclosure of past hypertension, diabetes, or lifestyle conditions in the initial proposal form.',
-        'Insurer repudiated claim in toto citing doctrine of utmost good faith (uberrima fides) and canceled policy.',
-        'Alleged that the current cardiac or surgical ailment is a secondary complication of undisclosed conditions.'
+        'Insurer alleged non-disclosure of past hypertension and diabetes in proposal form dated Aug 2021.',
+        'Insurer repudiated entire claim of Rs. 2,40,000 for emergency cardiac stenting and canceled policy ab-initio.',
+        'Claims panel asserted breach of utmost good faith (uberrima fides) and invoked Clause 4.1 exclusions.'
       ];
 
       counters = [
-        'Under Section 45 of the Insurance Act 1938 (amended 2015), no policy can be questioned or repudiated on any ground whatsoever after the expiry of 3 continuous years from issuance or revival.',
-        'The Supreme Court of India in landmark rulings (e.g., Manmohan Nanda vs. United India Insurance) ruled that common lifestyle conditions like mild hypertension do not constitute material suppression unless directly causal.',
-        'IRDAI regulations 2024 mandate that after 36 months of continuous coverage, pre-existing diseases must be covered without dispute.'
+        'Under Section 45(1) of the Insurance Act 1938 (amended 2015), no policy of insurance can be called into question or repudiated on ground of misstatement or non-disclosure after expiry of 3 continuous years (36 months).',
+        'As the policy was continuously in force from August 2021 to January 2026 (> 4 continuous years), the insurer is legally BARRED by statute from repudiating on non-disclosure grounds.',
+        'The Supreme Court of India in Manmohan Nanda v. United India Insurance and Sulbha Prakash Motegaonkar v. LIC held that ordinary lifestyle conditions cannot defeat genuine indemnity once the contestability window has expired.'
       ];
 
-      rationale = 'If your policy has been continuously active for 3 or more years, Section 45 of the Insurance Act 1938 acts as an impregnable statutory shield. The insurer is legally precluded from repudiating on grounds of non-disclosure or pre-existing diseases after 36 months.';
+      rationale = 'The insurer\'s repudiation is legally invalid on its face. Section 45 of the Insurance Act 1938 confers absolute indisputability on policies in force for more than 3 years. The Grievance Redressal Officer and the Insurance Ombudsman routinely direct 100% payment with penal interest in such cases.';
 
       checklist = [
-        { title: 'Continuous Renewal Receipts (3+ Years)', desc: 'Proof of policy continuity without break to invoke Section 45 statutory immunity.' },
-        { title: 'Treating Physician Nexus Certificate', desc: 'Attestation that current acute condition has no direct causal nexus with past asymptomatic markers.' },
-        { title: 'Initial Proposal Form Copy & Medical Exam Record (MER)', desc: 'Documentary proof that insurer conducted pre-issuance tele-underwriting or medicals.' },
-        { title: 'Discharge Summary & Indoor Case Papers (ICP)', desc: 'Certified indoor case papers from the hospital proving prompt and accurate disclosures during admission.' }
+        { title: 'Continuous Renewal Policy Schedules (2021-2026)', desc: 'Proof of policy continuity without break to trigger Section 45 statutory immunity.' },
+        { title: 'Treating Cardiologist Emergency Attestation', desc: 'Medical certificate confirming acute myocardial event required immediate emergency stenting.' },
+        { title: 'Copy of Original Proposal Form & Tele-MER Record', desc: 'Proof that insurer accepted premium and issued policy after underwriting assessment.' },
+        { title: 'Certified Hospital Discharge Summary & ICP', desc: 'Indoor case papers showing prompt, truthful clinical history recorded at admission.' }
       ];
 
-    } else if (lower.includes('motor') || lower.includes('delay') || lower.includes('intimation') || lower.includes('fir') || lower.includes('theft')) {
-      primaryGround = 'Procedural Repudiation for Delayed Intimation / Late Police Report';
-      contestabilityScore = 'High (IRDAI Circular Ref: IRDA/HLTH/MISC/CIR/216/09/2011)';
+    // SCENARIO 2: Room-Rent & Proportionate Deduction & Non-Payables
+    } else if (lower.includes('room') || lower.includes('proportionate') || lower.includes('capping') || lower.includes('non-payable') || lower.includes('consumables') || lower.includes('cholecystectomy')) {
+      primaryGround = 'Arbitrary Room-Rent Proportionate Deduction & Unlawful Consumables Haircut';
+      contestabilityScore = 'High Contestability (85% Recovery Potential)';
       contestabilityClass = 'contestability-high';
-      legalShield = 'IRDAI Circular on Rejection of Claims for Delay in Intimation';
+      legalShield = 'IRDAI Master Circular on Health Insurance 2024 & Delhi/Mumbai Ombudsman Precedents';
 
       allegations = [
-        'Policyholder delayed intimation to the insurer by several days beyond the 24/48 hour contractual requirement.',
-        'Police FIR or General Diary (GD) was lodged with a delay, allegedly depriving insurer of spot inspection.',
-        'Insurer repudiated entire claim citing breach of General Condition 1 of the policy.'
+        'Insurer penalized claimant for occupying a Single Room at Rs. 8,500/day against 1% cap (Rs. 3,000/day).',
+        'Proportionate deduction of 64.7% applied across surgeon fees, anesthesia, and diagnostic investigations.',
+        'Arbitrary disallowance of Rs. 32,300 for surgical consumables (PPE, cannulas, gloves, syringes) under List I.'
       ];
 
       counters = [
-        'IRDAI vide circular IRDA/HLTH/MISC/CIR/216/09/2011 explicitly instructed all insurers that genuine claims CANNOT be rejected merely on the grounds of technical delay in intimation if substantiated by reasonable causes.',
-        'The Supreme Court in Om Prakash vs. National Insurance Co. held that insurance contracts are contracts of indemnity and technical delays should not defeat the genuine purpose of insurance when the occurrence is undisputed.',
-        'The condition of immediate intimation is directory, not mandatory, when the incident itself is proven genuine via police GD and workshop job cards.'
+        'Under IRDAI Master Circular 2024 guidelines, insurers CANNOT apply proportionate deduction on ICU charges, doctor consultation fees, implants, or diagnostic tests unless explicitly tied to room tariffs in hospital contracts.',
+        'Multiple Insurance Ombudsman rulings have firmly established that doctor fees and surgery costs cannot be slashed proportionately when standard hospital tariffs are uniform across rooms.',
+        'Routine infection control consumables (gloves, syringes, IV cannulas) are integral to modern surgery and cannot be summarily wiped off without reasonable clinical review.'
       ];
 
-      rationale = 'IRDAI explicitly bars insurers from operating as loan sharks rejecting claims on hyper-technical clerical timelines. As long as the accident or event is genuine and verified by authorities, delay in intimation alone is legally unsustainable before the Insurance Ombudsman.';
+      rationale = 'Insurers often weaponize the 1% room rent cap to execute blanket haircuts across essential surgical bills. However, established Ombudsman jurisprudence directs insurers to refund proportionate cuts on surgeon charges and diagnostics unless the hospital provides a tiered doctor tariff proof.';
 
       checklist = [
-        { title: 'Affidavit Explaining Delay Reason', desc: 'Affidavit/written letter explaining emergency circumstances (e.g. medical treatment, shock, travel) causing intimation delay.' },
-        { title: 'Police General Diary (GD) or FIR Certified Copy', desc: 'Stamped copy from the local police station confirming the accident/theft record.' },
-        { title: 'Authorized Workshop Job Card & Estimate', desc: 'Original estimate with time-stamps proving vehicle was towed directly to authorized repair center.' },
-        { title: 'Photographs of Spot Damage & Geo-tagged Metadata', desc: 'Visual proof of accidental impact corroborating the mechanical damages claimed.' }
+        { title: 'Hospital Tariff Certificate for Surgeon & OT Fees', desc: 'Signed certificate from billing desk certifying surgeon fees were standard and NOT scaled to room category.' },
+        { title: 'Treating Surgeon Clinical Necessity Note', desc: 'Attestation confirming necessity of surgery and standard surgical equipment utilised.' },
+        { title: 'Detailed Pharmacy Batch Invoices', desc: 'Itemized vouchers proving medical necessity of all consumables and injections administered.' },
+        { title: 'Itemized Settlement Breakup from TPA', desc: 'Official deduction sheet demonstrating mathematical misapplication of proportionate reduction.' }
+      ];
+
+    // SCENARIO 3: Missing Itemized Bill & Discharge Summary Gap
+    } else if (lower.includes('itemized') || lower.includes('summary') || lower.includes('dengue') || lower.includes('icp') || lower.includes('closure') || lower.includes('no claim') || lower.includes('missing')) {
+      primaryGround = 'Hyper-Technical Rejection for Alleged Procedural Documentation Deficiencies';
+      contestabilityScore = 'High Contestability (90% Reversal upon Re-submission)';
+      contestabilityClass = 'contestability-high';
+      legalShield = 'IRDAI Protection of Policyholders\' Interests Regulations 2024 & Contra Proferentem Rule';
+
+      allegations = [
+        'Claimant submitted consolidated pharmacy bills of Rs. 38,500 without detailed batch-wise cash memos.',
+        'Discharge summary allegedly lacked hourly vitals monitoring and indoor case papers for platelet counts.',
+        'Insurer closed the file as "No Claim" under Clause 6.1 citing failure to furnish papers within 15 days.'
+      ];
+
+      counters = [
+        'IRDAI Protection of Policyholders\' Interests Regulations mandate that insurers cannot summarily close or reject genuine claims on technical procedural grounds without actively assisting the policyholder.',
+        'The Supreme Court of India in Gurmel Singh v. National Insurance Co. held that insurance contracts cannot be defeated by hyper-technical document requirements where genuine hospitalization is undisputed.',
+        'Dengue with severe thrombocytopenia is an acute medical emergency confirmed by laboratory platelet reports; summary closure constitutes severe deficiency of service.'
+      ];
+
+      rationale = 'Closing a claim file as "No Claim" due to missing internal hospital notes is a standard delay tactic. Once the itemized pharmacy breakdown and treating doctor certificate are resubmitted, the Insurance Ombudsman routinely awards full settlement with penal interest.';
+
+      checklist = [
+        { title: 'Hospital Pharmacy Batch-wise Cash Memos', desc: 'Itemized retail invoices from the hospital pharmacy detailing all medicines and fluids administered.' },
+        { title: 'Certified Daily Platelet & Lab Reports', desc: 'Complete pathology lab reports with timestamps showing progression and medical necessity of hospitalization.' },
+        { title: 'Attested Indoor Case Papers (ICP) & Vitals Chart', desc: 'Doctor-stamped nursing chart proving continuous inpatient monitoring during fever/thrombocytopenia.' },
+        { title: 'Written Re-submission Cover Letter', desc: 'Formally putting the insurer on notice that all document queries stand fully rectified.' }
       ];
 
     } else {
       primaryGround = 'Ambiguous Policy Exclusion & Interpretation Deficit';
-      contestabilityScore = 'Medium-to-High (Contra Proferentem Rule)';
+      contestabilityScore = 'Medium-to-High (Contra Proferentem Shield)';
       contestabilityClass = 'contestability-medium';
       legalShield = 'Doctrine of Contra Proferentem & Consumer Protection Act 2019';
 
       allegations = [
-        'Insurer cited exclusionary clause without demonstrating that the exclusion was explicitly explained to the policyholder during issuance.',
+        'Insurer cited exclusionary clause without proving it was explained during policy issuance.',
         'Deduction claimed under unverified reasonable & customary charges or documentation deficiencies.'
       ];
 
       counters = [
-        'Under the doctrine of Contra Proferentem, any ambiguity in standard form insurance contracts drafted solely by the insurer must be interpreted strictly in favor of the insured.',
-        'IRDAI Protection of Policyholders\' Interests Regulations 2024 mandate that insurers must prove exclusions were highlighted in the Key Feature Document (KFD) provided at policy inception.'
+        'Under the doctrine of Contra Proferentem, any ambiguity in insurance contract wordings must be strictly construed in favor of the insured policyholder.',
+        'IRDAI regulations require insurers to demonstrate that specific exclusion clauses were highlighted in the Key Feature Document (KFD) provided at inception.'
       ];
 
       rationale = 'Insurers bear the strict legal burden of proving that an exclusion clause applies squarely. In the absence of signed acceptance of exclusionary riders, the Ombudsman routinely orders payment in full.';
 
       checklist = [
         { title: 'Itemized Final Hospital / Repair Bill', desc: 'Breakdown of all billed heads with receipt vouchers.' },
-        { title: 'Treating Doctor Justification Letter', desc: 'Clarifying the clinical rationale for the specific treatment or hospitalization protocol.' },
+        { title: 'Treating Doctor Justification Letter', desc: 'Clarifying the clinical rationale for the specific treatment protocol.' },
         { title: 'Full Policy Schedule with Terms & Conditions', desc: 'Checking whether the Key Feature Document (KFD) was provided and highlighted.' }
       ];
     }
 
-    // FORMAL APPEAL LETTER GENERATOR
+    // STATUTORY APPEAL LETTER GENERATOR
     const ombudsmanJurisdictionNote = amountVal <= 5000000
       ? `TAKE FURTHER NOTICE that as the disputed claim amount of ${formattedAmount} falls well within the pecuniary jurisdiction of the Honorable Insurance Ombudsman (up to Rs. 50,00,000/- under Rule 17(1) of the Insurance Ombudsman Rules, 2017), the undersigned shall immediately lodge a formal complaint on the IRDAI Bima Bharosa portal and approach the Insurance Ombudsman Office having territorial jurisdiction upon expiry of your statutory 15-day window.`
       : `TAKE FURTHER NOTICE that as the disputed claim amount of ${formattedAmount} exceeds Rs. 50,00,000/-, upon expiry of the statutory 15-day resolution timeline, the undersigned shall initiate formal litigation before the State/National Consumer Disputes Redressal Commission (NCDRC) under the Consumer Protection Act, 2019, claiming the principal amount with 18% penal interest and punitive damages for gross deficiency of service.`;
@@ -593,7 +562,7 @@ The Grievance Redressal Officer (GRO)
 ${targetInsurer}
 Corporate Grievance Redressal Cell / Claims Department
 
-SUBJECT: STATUTORY GRIEVANCE APPEAL & FORMAL NOTICE UNDER IRDAI PROTECTION OF POLICYHOLDERS' INTERESTS REGULATIONS, 2024
+SUBJECT: STATUTORY GRIEVANCE APPEAL & FORMAL NOTICE UNDER IRDAI (PROTECTION OF POLICYHOLDERS' INTERESTS) REGULATIONS, 2024
 RE: UNLAWFUL REPUDIATION / ARBITRARY DEDUCTION OF CLAIM
 • Policy Number: ${targetPolicyNo}
 • Claim Reference ID: CIR/${Math.floor(100000 + Math.random() * 900000)}
@@ -645,7 +614,7 @@ Address: New Delhi, India
 
 ENCLOSURES:
 1. Complete certified hospital/repair invoices and itemized receipt vouchers.
-2. Treating Doctor Certificate of Medical Necessity / Police Report.
+2. Treating Doctor Certificate of Medical Necessity / Pathology Reports.
 3. Copy of Original Policy Schedule & continuous renewal certificates.
 4. Copy of the arbitrary rejection notice under appeal.`;
 
@@ -665,42 +634,42 @@ ENCLOSURES:
   }
 
   // ==========================================
-  // 10. INSTANT DEMO X-RAY ENGINE
+  // 9. INSTANT DEMO X-RAY ENGINE
   // ==========================================
   function generateDemoXrayAnalysis(policyType, sumInsured, text) {
     const lower = text.toLowerCase();
 
     let archetype = 'Traditional Endowment / Money-Back Policy';
     let archetypeNote = 'Disguised Low-Yield Savings Product with Sub-Optimal Life Cover';
-    let realIrr = '4.6% - 5.2% p.a.';
-    let verdict = 'Poor Inflation-Adjusted Return';
+    let realIrr = '4.8% - 5.2% p.a. (Post-Tax)';
+    let verdict = 'Sub-Inflation Yield (Wealth Destroyer)';
     let categoryBadge = 'Low Protection / High Opportunity Cost';
     let narrative = '';
     let traps = [];
     let disclosures = [];
     let records = [];
 
-    if (policyType === 'Life-Endowment' || lower.includes('money-back') || lower.includes('guaranteed') || lower.includes('endowment') || lower.includes('bonus')) {
-      archetype = 'Endowment / Guaranteed Savings Plan';
+    if (policyType === 'Life-Endowment' || lower.includes('money-back') || lower.includes('guaranteed') || lower.includes('endowment') || lower.includes('bonus') || lower.includes('jeevan')) {
+      archetype = 'Endowment / Guaranteed Savings Plan ("Tax-Saver + Return + Cover")';
       archetypeNote = 'Bundled Savings with Inadequate Death Benefit (10x Annual Premium)';
-      realIrr = '4.8% - 5.4% p.a. (Post-Tax)';
+      realIrr = '4.9% - 5.3% p.a. (Post-Tax)';
       verdict = 'Sub-Inflation Yield (Wealth Destroyer)';
       categoryBadge = 'High Cost / Low Protection';
 
       narrative = `
-        <p><strong>The "Triple Guaranteed Returns" Illusion:</strong> Agents frequently advertise phrases like "Receive ₹31.5 Lakhs on a ₹10 Lakh deposit — more than 3x your money!". However, financial mathematics reveals that receiving ₹31.5 Lakhs spread over 25 long years translates to a compounded annual Internal Rate of Return (IRR) of only <strong>~5.1% per annum</strong>.</p>
-        <p><strong>The Opportunity Cost Reality Check:</strong> With Indian retail inflation averaging 5.5% - 6.0% and Public Provident Fund (PPF) offering 7.1% guaranteed tax-free, this policy <em>loses purchasing power over time</em>. If an investor instead buys a pure Term Life Plan (giving ₹1 Crore cover for ~₹12,000/year) and invests the remaining ₹88,000/year in a Nifty 50 Index Fund or PPF, the expected corpus at Year 25 would exceed <strong>₹85 Lakhs to ₹1.10 Crores</strong> with 10x higher life protection!</p>
+        <p><strong>The "Triple Guaranteed Returns" Illusion:</strong> Agents aggressively market phrases like "Receive ₹26.25 Lakhs on a ₹10 Lakh deposit — more than 2.6x your money!". However, financial mathematics reveals that receiving ₹26.25 Lakhs spread over 25 long years translates to a compounded annual Internal Rate of Return (IRR) of only <strong>~4.9% per annum</strong>.</p>
+        <p><strong>The Opportunity Cost Reality Check:</strong> With Indian retail inflation averaging 5.5% - 6.0% and Public Provident Fund (PPF) offering 7.1% guaranteed tax-free, this policy <em>loses purchasing power over time</em>. If an investor instead buys a pure Term Life Plan (giving ₹1 Crore cover for ~₹12,000/year) and invests the remaining ₹88,000/year in a Nifty 50 Index Fund or PPF, the expected corpus at Year 25 would exceed <strong>₹85 Lakhs to ₹1.15 Crores</strong> with 10x higher life protection!</p>
       `;
 
       traps = [
-        { name: 'Surrender Charge Trap', level: 'High Trap', badge: 'badge-danger', clause: 'Special Surrender Value (SSV)', impact: 'If you discontinue the policy within the first 3 years, you lose 65% to 80% of all paid premiums. Liquidity is virtually locked with punitive surrender penalty scales.' },
-        { name: 'Severe Underinsurance Risk', level: 'High Trap', badge: 'badge-danger', clause: 'Sum Assured = 10x Premium', impact: 'A ₹1 Lakh premium affords merely ₹10 Lakhs life cover. In reality, a family dependent requires at least 15x-20x annual household income in pure term cover.' },
+        { name: 'Severe Underinsurance Trap', level: 'High Trap', badge: 'badge-danger', clause: 'Sum Assured = 10x Premium', impact: 'A ₹1 Lakh annual premium affords merely ₹10 Lakhs life cover. In reality, a breadwinner requires at least 15x-20x annual household income in pure term cover.' },
+        { name: 'Surrender Charge Lock-in', level: 'High Trap', badge: 'badge-danger', clause: 'Special Surrender Value (SSV)', impact: 'If you discontinue the policy within the first 3 years, you forfeit 65% to 80% of all paid premiums. Liquidity is virtually locked with punitive surrender penalty scales.' },
         { name: 'Non-Guaranteed "Bonus" Fine Print', level: 'Watch Out', badge: 'badge-warning', clause: 'Reversionary & Terminal Bonus', impact: 'Brochure tables often project payouts at illustrative 8% gross returns. Under IRDAI rules, actual bonus declaration is at the insurer\'s discretion and has historically lagged below 5%.' }
       ];
 
       disclosures = [
         'Disclose exact existing life insurance portfolio value (Human Life Value ceiling).',
-        'Declare any high-risk hobbies (paragliding, scuba diving, racing) or international travel to conflict zones.',
+        'Declare any high-risk hobbies (racing, paragliding) or international travel to conflict zones.',
         'Disclose accurate annual income with ITR V forms; salary slips alone can cause dispute during claim settlement.'
       ];
 
@@ -712,7 +681,6 @@ ENCLOSURES:
       ];
 
     } else {
-      // Health / Mediclaim policy analysis
       archetype = 'Comprehensive Health / Mediclaim Policy';
       archetypeNote = 'Hospitalization Indemnity with Hidden Out-of-Pocket Traps';
       realIrr = 'N/A (Pure Indemnity Product)';
@@ -720,13 +688,13 @@ ENCLOSURES:
       categoryBadge = 'High Potential Haircuts';
 
       narrative = `
-        <p><strong>The Out-of-Pocket Deduction Trap:</strong> While the brochure advertises "Cashless Anywhere across 10,000+ Hospitals", the fine print contains subtle caps that can leave policyholders paying 40% to 60% of hospital bills out-of-pocket during tertiary or emergency care.</p>
-        <p><strong>The 1% Room Rent Danger:</strong> A 1% room rent limit on a ₹5 Lakh policy means your eligible room tariff is just ₹5,000/day. If you occupy a room at ₹10,000/day, the insurer invokes <em>Proportionate Deduction</em>, slashing surgeon fees, anesthetist fees, and OT charges by 50%!</p>
+        <p><strong>The Out-of-Pocket Deduction Trap:</strong> While brochures advertise "Cashless Anywhere across 10,000+ Hospitals", fine-print clauses can leave policyholders paying 40% to 60% of hospital bills out-of-pocket during emergency care.</p>
+        <p><strong>The 1% Room Rent Danger:</strong> A 1% room rent limit on a ₹5 Lakh policy means your eligible room tariff is just ₹5,000/day. If you occupy a room at ₹8,500/day, the insurer invokes <em>Proportionate Deduction</em>, slashing surgeon fees, anesthetist fees, and OT charges proportionately!</p>
       `;
 
       traps = [
         { name: 'Room Rent Capping & Proportionate Deduction', level: 'High Trap', badge: 'badge-danger', clause: 'Clause 3.1: 1% SI / 2% ICU Cap', impact: 'Breaching room rent cap triggers proportionate deduction across all associated surgical, nursing, and medical expenses, resulting in massive haircuts.' },
-        { name: 'Senior Citizen Mandatory Co-Payment', level: 'High Trap', badge: 'badge-danger', clause: 'Clause 4.3: 20% Co-Pay for Age 55+', impact: 'On a ₹6,00,000 bill, you must pay ₹1,20,000 out-of-pocket on every single claim, regardless of hospitalization cause.' },
+        { name: 'Senior Citizen Mandatory Co-Payment', level: 'High Trap', badge: 'badge-danger', clause: 'Clause 4.3: 20% Co-Pay for Age 55+', impact: 'On a ₹5,00,000 bill, you must pay ₹1,00,000 out-of-pocket on every single claim, regardless of hospitalization cause.' },
         { name: 'Specific Illness 24-Month Waiting Period', level: 'Watch Out', badge: 'badge-warning', clause: 'Clause 2.2: 24 Months Moratorium', impact: 'Joint replacements, cataract, hernia, piles, stones, and cysts are strictly non-payable during the first 2 policy years.' },
         { name: 'Exclusion of Consumables & PPE Items', level: 'Watch Out', badge: 'badge-warning', clause: 'Non-Medical Items List I-IV', impact: 'Gloves, PPE, syringes, masks, pulse oximeter probes (accounting for 10-15% of total hospital billing) are excluded unless Consumables Rider is opted.' }
       ];
@@ -758,7 +726,7 @@ ENCLOSURES:
   }
 
   // ==========================================
-  // 11. LIVE GEMINI 2.5 FLASH API INTEGRATION
+  // 10. LIVE GEMINI 2.5 FLASH API INTEGRATION
   // ==========================================
   async function callGeminiApi(promptText) {
     if (!state.geminiApiKey) {
@@ -804,20 +772,19 @@ ENCLOSURES:
     try {
       return JSON.parse(candidateText);
     } catch {
-      // In case json is wrapped in markdown code blocks
       const cleaned = candidateText.replace(/```json/gi, '').replace(/```/g, '').trim();
       return JSON.parse(cleaned);
     }
   }
 
   // ==========================================
-  // 12. RENDERERS
+  // 11. RENDERERS
   // ==========================================
   function renderRejectionResults(data) {
     elements.resultsRejection.classList.remove('hidden');
     elements.resultsRejection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    // 1. Ombudsman Banner
+    // 1. Ombudsman Banner (Pecuniary Jurisdiction: <= ₹50 Lakhs)
     const isOmbudsman = data.amountVal <= 5000000;
     if (isOmbudsman) {
       elements.ombudsmanBanner.innerHTML = `
@@ -845,7 +812,7 @@ ENCLOSURES:
       `;
     }
 
-    // 2. Step A: Audit
+    // 2. Step A: Denial Audit
     elements.contestabilityBadge.textContent = data.contestabilityScore;
     elements.contestabilityBadge.className = `contestability-pill ${data.contestabilityClass || 'contestability-high'}`;
 
@@ -853,7 +820,6 @@ ENCLOSURES:
     elements.auditContestabilityScore.textContent = data.contestabilityScore;
     elements.auditLegalShield.textContent = data.legalShield;
 
-    // Allegations vs Counters
     elements.auditInsurerAllegation.innerHTML = data.allegations.map(al => `
       <div class="col-point">
         <span class="col-point-bullet">•</span>
@@ -881,7 +847,6 @@ ENCLOSURES:
       </label>
     `).join('');
 
-    // Add checkbox toggle classes
     elements.checklistItemsContainer.querySelectorAll('.checklist-item input').forEach(chk => {
       chk.addEventListener('change', (e) => {
         const item = e.target.closest('.checklist-item');
@@ -942,7 +907,180 @@ ENCLOSURES:
   }
 
   // ==========================================
-  // 13. FORM SUBMISSIONS
+  // 12. RUN PRESET END-TO-END WITH 3-STAGE PROGRESS
+  // ==========================================
+  async function runPreset(key) {
+    const preset = PRESETS[key];
+    if (!preset) return;
+
+    // Highlight all matching buttons briefly
+    document.querySelectorAll(`[data-preset-action="${key}"], [data-preset="${key}"], [data-xray-preset="${key}"]`).forEach(btn => {
+      btn.classList.add('active-preset');
+      setTimeout(() => btn.classList.remove('active-preset'), 1000);
+    });
+
+    if (preset.tab === 'xray') {
+      switchTab('xray');
+      elements.xrayPolicyType.value = preset.policyType;
+      elements.xraySumInsured.value = preset.sumInsured;
+      elements.xrayText.value = preset.text;
+      updateCharCount(elements.xrayText, elements.xrayCharCount);
+
+      const stages = [
+        '1. Auditing Protection vs. Savings / IRR Return Metrics...',
+        '2. Scanning for Hidden Sub-Limits, Room-Rent Caps & Co-Pay...',
+        '3. Formulating Disclosure & Paperwork Defense Shield...'
+      ];
+
+      const result = await runProgressPipeline(
+        elements.progressContainerXray,
+        elements.progressXrayTitle,
+        elements.progressBarXray,
+        'stage-xray',
+        stages,
+        async () => {
+          if (state.mode === 'gemini' && state.geminiApiKey) {
+            try {
+              const prompt = `You are ClaimSetu, expert Indian Insurance Decoder.
+Audit this policy brochure / agent pitch / fine-print text for Indian consumers. Return STRICT JSON with this schema:
+{
+  "categoryBadge": "Short tag e.g. High Cost / Low Protection",
+  "archetype": "Product archetype name",
+  "archetypeNote": "One line summary of product reality",
+  "realIrr": "Estimated real IRR percentage e.g. 4.8% - 5.3% p.a.",
+  "verdict": "Clear verdict phrase",
+  "narrative": "HTML string containing 2 paragraphs comparing this product against pure Term + Mutual Fund or explaining room-rent trap",
+  "traps": [
+    {
+      "name": "Trap name",
+      "level": "High Trap or Watch Out or Safe",
+      "badge": "badge-danger or badge-warning or badge-success",
+      "clause": "Clause reference or name",
+      "impact": "Detailed impact on policyholder pocket"
+    }
+  ],
+  "disclosures": ["Array of 3 strings of mandatory medical/lifestyle disclosures to avoid Section 45 repudiation"],
+  "records": ["Array of 3-4 permanent documents to retain for 10+ years"]
+}
+
+POLICY CONTEXT:
+Category: ${preset.policyType}
+Sum Insured / Premium: ${preset.sumInsured}
+Text:
+${preset.text}`;
+              return await callGeminiApi(prompt);
+            } catch (err) {
+              console.warn('Gemini AI fallback:', err);
+              showToast(`Gemini notice: ${err.message}. Seamlessly switched to Instant Demo Engine.`, 'error');
+              return generateDemoXrayAnalysis(preset.policyType, preset.sumInsured, preset.text);
+            }
+          }
+          return generateDemoXrayAnalysis(preset.policyType, preset.sumInsured, preset.text);
+        }
+      );
+
+      renderXrayResults(result);
+      showToast(`Analyzed ${preset.name}!`, 'success');
+
+    } else {
+      // Rejection Presets (1, 2, 3)
+      switchTab('rejection');
+      elements.policyType.value = preset.policyType;
+      elements.claimAmount.value = preset.claimAmount;
+      elements.insurerName.value = preset.insurerName;
+      elements.policyNumber.value = preset.policyNumber;
+      elements.rejectionDate.value = preset.rejectionDate;
+      elements.rejectionText.value = preset.rejectionText;
+
+      updateAmountInWords();
+      updateCharCount(elements.rejectionText, elements.rejectionCharCount);
+
+      const stages = [
+        '1. Parsing Rejection Clauses & Identifying Legal Grounds...',
+        '2. Cross-referencing IRDAI Guidelines & Section 45 Protections...',
+        '3. Formulating GRO Representation & Ombudsman Docket...'
+      ];
+
+      const result = await runProgressPipeline(
+        elements.progressContainerRejection,
+        elements.progressRejectionTitle,
+        elements.progressBarRejection,
+        'stage-rej',
+        stages,
+        async () => {
+          if (state.mode === 'gemini' && state.geminiApiKey) {
+            try {
+              const prompt = `You are ClaimSetu, expert in Indian Insurance Law & IRDAI regulations.
+Analyze this insurance claim rejection dispute and return STRICT JSON with this schema:
+{
+  "primaryGround": "String describing specific legal denial ground",
+  "contestabilityScore": "High / Medium / Low Contestability with percentage",
+  "contestabilityClass": "contestability-high or contestability-medium or contestability-low",
+  "legalShield": "Statutory defense citation (e.g. Section 45 of Insurance Act 1938 or IRDAI Proportionate Deduction circulars)",
+  "allegations": ["Array of 3 strings summarizing what insurer claimed"],
+  "counters": ["Array of 3 strings detailing statutory counter-arguments under Indian law"],
+  "rationale": "Clear plain English paragraph explaining why this denial is vulnerable before the Grievance Redressal Officer and Insurance Ombudsman",
+  "checklist": [
+    {"title": "Document name", "desc": "Why required and how to obtain"}
+  ],
+  "appealLetter": "Full ready-to-copy statutory appeal letter addressed to Grievance Redressal Officer citing IRDAI 15-day resolution rule and Insurance Ombudsman Rules 2017"
+}
+
+DISPUTE DETAILS:
+Policy Type: ${preset.policyType}
+Disputed Amount: Rs. ${preset.claimAmount}
+Insurer/TPA: ${preset.insurerName}
+Policy No: ${preset.policyNumber}
+Rejection Date: ${preset.rejectionDate}
+Rejection Text:
+${preset.rejectionText}`;
+              const parsed = await callGeminiApi(prompt);
+              parsed.amountVal = parseFloat(preset.claimAmount) || 0;
+              parsed.formattedAmount = formatIndianCurrency(parsed.amountVal);
+              return parsed;
+            } catch (err) {
+              console.warn('Gemini AI fallback:', err);
+              showToast(`Gemini notice: ${err.message}. Seamlessly switched to Instant Demo Engine.`, 'error');
+              return generateDemoRejectionAnalysis(preset.policyType, preset.claimAmount, preset.insurerName, preset.policyNumber, preset.rejectionDate, preset.rejectionText);
+            }
+          }
+          return generateDemoRejectionAnalysis(preset.policyType, preset.claimAmount, preset.insurerName, preset.policyNumber, preset.rejectionDate, preset.rejectionText);
+        }
+      );
+
+      renderRejectionResults(result);
+      showToast(`Analyzed ${preset.name}!`, 'success');
+    }
+  }
+
+  // ==========================================
+  // 13. PRESET CLICK HANDLERS
+  // ==========================================
+  function initPresets() {
+    document.querySelectorAll('[data-preset-action]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.presetAction;
+        runPreset(key);
+      });
+    });
+
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.preset;
+        runPreset(key);
+      });
+    });
+
+    document.querySelectorAll('[data-xray-preset]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.xrayPreset;
+        runPreset(key);
+      });
+    });
+  }
+
+  // ==========================================
+  // 14. FORM SUBMISSIONS (MANUAL RUNS)
   // ==========================================
   elements.formRejection.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -1005,7 +1143,7 @@ ${text}`;
               parsed.formattedAmount = formatIndianCurrency(parsed.amountVal);
               return parsed;
             } catch (err) {
-              console.warn('Gemini AI failed, gracefully falling back to Instant Demo Engine:', err);
+              console.warn('Gemini AI fallback:', err);
               showToast(`Gemini error: ${err.message}. Seamlessly switched to Instant Demo Engine.`, 'error');
               return generateDemoRejectionAnalysis(policyType, claimAmount, insurer, policyNo, rejectionDate, text);
             }
@@ -1080,7 +1218,7 @@ ${text}`;
 
               return await callGeminiApi(prompt);
             } catch (err) {
-              console.warn('Gemini AI failed, gracefully falling back to Instant Demo Engine:', err);
+              console.warn('Gemini AI fallback:', err);
               showToast(`Gemini error: ${err.message}. Seamlessly switched to Instant Demo Engine.`, 'error');
               return generateDemoXrayAnalysis(policyType, sumInsured, text);
             }
@@ -1098,7 +1236,7 @@ ${text}`;
   });
 
   // ==========================================
-  // 14. COPY & DOWNLOAD ACTIONS
+  // 15. COPY & DOWNLOAD ACTIONS
   // ==========================================
   elements.btnCopyAppeal.addEventListener('click', async () => {
     const text = elements.appealLetterOutput.textContent;
@@ -1114,7 +1252,6 @@ ${text}`;
         elements.btnCopyAppeal.style.backgroundColor = '';
       }, 2500);
     } catch {
-      // Fallback
       const textarea = document.createElement('textarea');
       textarea.value = text;
       document.body.appendChild(textarea);
@@ -1146,7 +1283,7 @@ ${text}`;
   });
 
   // ==========================================
-  // 15. INPUT LISTENERS
+  // 16. INPUT LISTENERS
   // ==========================================
   elements.claimAmount.addEventListener('input', updateAmountInWords);
   elements.rejectionText.addEventListener('input', () => updateCharCount(elements.rejectionText, elements.rejectionCharCount));
@@ -1176,7 +1313,7 @@ ${text}`;
   });
 
   // ==========================================
-  // 16. NUMBERS TO WORDS HELPER (INDIAN NUMBERING SYSTEM)
+  // 17. NUMBERS TO WORDS HELPER (INDIAN NUMBERING SYSTEM)
   // ==========================================
   function numberToWordsIndian(num) {
     if (!num || isNaN(num)) return 'Zero';
@@ -1215,7 +1352,7 @@ ${text}`;
   }
 
   // ==========================================
-  // 17. INITIALIZATION
+  // 18. INITIALIZATION
   // ==========================================
   initByok();
   initTabs();

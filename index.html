@@ -19,7 +19,7 @@
     <div class="header-inner container">
       <div class="brand-block">
         <div class="brand-logo">
-          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="40" height="40" rx="10" fill="#0F172A"/>
             <path d="M20 6L32 11.5V19.5C32 27 26.8 33.8 20 36C13.2 33.8 8 27 8 19.5V11.5L20 6Z" fill="#1E293B" stroke="#F97316" stroke-width="2.2" stroke-linejoin="round"/>
             <path d="M14 20L18 24L26 15" stroke="#10B981" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,7 +50,7 @@
         </div>
 
         <button type="button" class="btn-settings-toggle" id="btn-settings-toggle" aria-expanded="false" title="Configure Gemini API Key">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
             <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
           </svg>
@@ -64,14 +64,14 @@
       <div class="byok-inner container">
         <div class="byok-content">
           <div class="byok-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
               <path d="M7 11V7a5 5 0 0110 0v4"/>
             </svg>
-            <span>Client-Side Bring-Your-Own-Key (BYOK)</span>
+            <span>Client-Side Bring-Your-Own-Key (BYOK) — Zero Server Storage</span>
           </div>
           <p class="byok-desc">
-            Your key is stored strictly in your browser's <code>localStorage</code> and directly queries <code>gemini-2.5-flash</code>. It is never transmitted to any external database or server.
+            Your key is stored strictly in your browser's <code>localStorage</code> and directly queries <code>gemini-2.5-flash</code> via HTTPS. It is never logged or sent to any intermediary server.
           </p>
           <div class="byok-input-row">
             <div class="input-with-icon">
@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <!-- Trust Ticker Bar -->
+    <!-- Statutory Trust Strip (Clean, Responsive, No Horizontal Scrollbar) -->
     <div class="trust-ticker">
       <div class="container ticker-inner">
         <span class="ticker-item"><span class="ticker-icon">⚖️</span> Insurance Act 1938 § 45 (3-Yr Indisputability)</span>
@@ -108,34 +108,69 @@
   <!-- Main Application Body -->
   <main class="main-content container">
 
+    <!-- MASTER 4-PRESET QUICK SHOWCASE BANNER -->
+    <section class="master-presets-banner" aria-label="One-Click Indian Dispute Presets">
+      <div class="presets-header">
+        <div class="presets-title-wrap">
+          <span class="presets-label">⚡ 1-Click Indian Presets:</span>
+          <span class="presets-hint">Click any preset to automatically load and execute the 3-stage statutory pipeline:</span>
+        </div>
+      </div>
+      <div class="presets-grid master-presets-grid">
+        <button type="button" class="preset-card" data-preset-action="preset-1" title="Preset 1: Alleged Non-Disclosure of Pre-Existing Condition (₹2,40,000)">
+          <div class="preset-badge badge-danger">Section 45 Protection</div>
+          <div class="preset-title">Preset 1: Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition</div>
+          <div class="preset-meta">Disputed: ₹2,40,000 • Cardiac Stent Repudiation past 3-Yr Contestability</div>
+        </button>
+
+        <button type="button" class="preset-card" data-preset-action="preset-2" title="Preset 2: Room-Rent Sub-Limit & Non-Payable Items Deduction (₹1,15,000)">
+          <div class="preset-badge badge-warning">Proportionate Deduction</div>
+          <div class="preset-title">Preset 2: Partial Settlement — Room-Rent Sub-Limit &amp; Non-Payable Items Deduction</div>
+          <div class="preset-meta">Disputed: ₹1,15,000 • 1% Room Cap &amp; Consumables Haircut</div>
+        </button>
+
+        <button type="button" class="preset-card" data-preset-action="preset-3" title="Preset 3: Missing Itemized Bill & Discharge Summary Gap (₹85,000)">
+          <div class="preset-badge badge-info">Documentation Gap</div>
+          <div class="preset-title">Preset 3: Claim Rejected — Missing Itemized Bill &amp; Discharge Summary Gap</div>
+          <div class="preset-meta">Disputed: ₹85,000 • Emergency Dengue Case Closure</div>
+        </button>
+
+        <button type="button" class="preset-card" data-preset-action="preset-4" title="Preset 4: Policy Brochure Audit — Tax-Saver + Guaranteed Return + Cover Pitch">
+          <div class="preset-badge badge-teal">Hidden Trap Scanner</div>
+          <div class="preset-title">Preset 4: Policy Brochure Audit — "Tax-Saver + Guaranteed Return + Cover" Pitch</div>
+          <div class="preset-meta">Deposit: ₹1L/yr • Exposed Sub-Inflation IRR (~4.9%) &amp; Underinsurance</div>
+        </button>
+      </div>
+    </section>
+
     <!-- Primary Nav Tabs -->
     <nav class="nav-tabs" role="tablist" aria-label="ClaimSetu Core Modules">
       <button type="button" class="tab-button active" id="tab-btn-rejection" role="tab" aria-selected="true" aria-controls="tab-rejection">
         <span class="tab-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             <path d="M12 8v4M12 16h.01"/>
           </svg>
         </span>
         <span class="tab-title">1. Rejection Decoder &amp; Appeal Builder</span>
-        <span class="tab-sub">Audit Denials &amp; Draft GRO/Ombudsman Letters</span>
+        <span class="tab-sub">Audit Denials &amp; Draft GRO/Ombudsman Letters (Presets 1, 2, 3)</span>
       </button>
 
       <button type="button" class="tab-button" id="tab-btn-xray" role="tab" aria-selected="false" aria-controls="tab-xray">
         <span class="tab-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="11" cy="11" r="8"/>
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             <path d="M11 8v6M8 11h6"/>
           </svg>
         </span>
         <span class="tab-title">2. Policy Fine-Print X-Ray</span>
-        <span class="tab-sub">Uncover Hidden Traps, Room-Rent Caps &amp; Real IRR</span>
+        <span class="tab-sub">Uncover Hidden Traps, Room-Rent Caps &amp; Real IRR (Preset 4)</span>
       </button>
 
       <button type="button" class="tab-button" id="tab-btn-architecture" role="tab" aria-selected="false" aria-controls="tab-architecture">
         <span class="tab-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <polyline points="16 18 22 12 16 6"/>
             <polyline points="8 6 2 12 8 18"/>
           </svg>
@@ -148,38 +183,11 @@
     <!-- TAB 1: REJECTION DECODER & APPEAL BUILDER -->
     <section id="tab-rejection" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-rejection">
 
-      <!-- One-Click Presets Bar -->
-      <div class="presets-section">
-        <div class="presets-header">
-          <span class="presets-label">⚡ 1-Click Indian Claim Presets:</span>
-          <span class="presets-hint">Click any realistic dispute to auto-fill and test immediately:</span>
-        </div>
-        <div class="presets-grid">
-          <button type="button" class="preset-card" data-preset="preset-roomrent">
-            <div class="preset-badge badge-warning">Proportionate Deduction</div>
-            <div class="preset-title">Cataract &amp; Room-Rent Cap Breach</div>
-            <div class="preset-meta">Claim: ₹3,85,000 • Denied: ₹1,68,000</div>
-          </button>
-
-          <button type="button" class="preset-card" data-preset="preset-ped">
-            <div class="preset-badge badge-danger">Section 45 Protection</div>
-            <div class="preset-title">Pre-Existing Disease (PED) Repudiation</div>
-            <div class="preset-meta">Claim: ₹6,50,000 • Cardiac Stenting (4-Yr Policy)</div>
-          </button>
-
-          <button type="button" class="preset-card" data-preset="preset-motor">
-            <div class="preset-badge badge-info">Procedural Delay</div>
-            <div class="preset-title">Motor Accident Claim: Delayed FIR/Intimation</div>
-            <div class="preset-meta">Claim: ₹1,95,000 • 7-Day Delay Repudiation</div>
-          </button>
-        </div>
-      </div>
-
-      <!-- Input Card -->
+      <!-- Form Card -->
       <div class="card form-card">
         <div class="card-header">
           <div class="card-header-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" aria-hidden="true">
               <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="16" y1="13" x2="8" y2="13"/>
@@ -189,7 +197,7 @@
           </div>
           <div>
             <h2 class="card-title">Claim Dispute Details</h2>
-            <p class="card-desc">Paste the rejection letter, email, SMS, or deduction summary received from your TPA or Insurer.</p>
+            <p class="card-desc">Enter your claim parameters and paste the rejection letter, deduction summary, or TPA notice.</p>
           </div>
         </div>
 
@@ -209,21 +217,21 @@
               <label for="claim-amount">Disputed / Rejected Claim Amount (₹) <span class="required">*</span></label>
               <div class="input-prefix-wrapper">
                 <span class="input-prefix">₹</span>
-                <input type="number" id="claim-amount" placeholder="e.g. 385000" min="1000" step="500" required>
+                <input type="number" id="claim-amount" placeholder="e.g. 240000" min="1000" step="500" required>
               </div>
               <span id="amount-in-words" class="input-hint">Enter amount in INR</span>
             </div>
 
             <div class="form-group">
               <label for="insurer-name">Insurer / TPA Name (Optional)</label>
-              <input type="text" id="insurer-name" placeholder="e.g. Star Health, HDFC ERGO, Care, Medi Assist">
+              <input type="text" id="insurer-name" placeholder="e.g. Star Health, Care, Niva Bupa, HDFC ERGO">
             </div>
           </div>
 
           <div class="form-row-two">
             <div class="form-group">
               <label for="policy-number">Policy Number / Claim Ref No. (Optional)</label>
-              <input type="text" id="policy-number" placeholder="e.g. POL/2022/9847291 / CIR/2026/8831">
+              <input type="text" id="policy-number" placeholder="e.g. SH/2021/4819028 / CIR/2026/782194">
             </div>
 
             <div class="form-group">
@@ -238,7 +246,7 @@
               <button type="button" class="btn-clear-text" id="btn-clear-rejection">Clear</button>
             </div>
             <textarea id="rejection-text" rows="7" placeholder="Paste the exact rejection notice text or TPA email here. For example:
-'Dear Policyholder, with reference to Claim ID CIR/2026/4102, your cashless claim for admission at Apollo Hospitals has been repudiated under Clause 4.1 (Non-disclosure of pre-existing hypertension) and room rent capping breach. Associated medical charges have been proportionately slashed by 45%...'" required></textarea>
+'Dear Policyholder, with reference to Claim ID CIR/2026/782194, your claim has been repudiated under Clause 4.1 for alleged non-disclosure of pre-existing hypertension...'" required></textarea>
             <div class="textarea-footer">
               <span id="rejection-char-count">0 characters</span>
               <span class="confidential-badge">🔒 Kept completely local &amp; private</span>
@@ -282,12 +290,12 @@
       <!-- Results Container (3-Step Pipeline) -->
       <div id="results-rejection" class="results-container hidden">
 
-        <!-- Ombudsman Jurisdiction Alert Banner -->
+        <!-- Ombudsman Jurisdiction Alert Banner (Up to ₹50 Lakhs) -->
         <div id="ombudsman-jurisdiction-banner" class="ombudsman-banner">
-          <!-- Populated by JS based on claim amount <= 50L -->
+          <!-- Dynamically populated by JS based on whether claim amount <= ₹50,00,000 -->
         </div>
 
-        <!-- 3-Step Navigation Tabs / Indicators -->
+        <!-- 3-Step Navigation Stepper -->
         <div class="pipeline-stepper">
           <div class="step-nav active" data-step="a">
             <span class="step-num">Step A</span>
@@ -323,11 +331,11 @@
               <div id="audit-primary-ground" class="audit-card-val text-danger">Analyzing...</div>
             </div>
             <div class="audit-card">
-              <div class="audit-card-label">Contestability Potential</div>
+              <div class="audit-card-label">Contestability Rating</div>
               <div id="audit-contestability-score" class="audit-card-val text-success">Analyzing...</div>
             </div>
             <div class="audit-card">
-              <div class="audit-card-label">Statutory Defense Basis</div>
+              <div class="audit-card-label">Statutory Defense Shield</div>
               <div id="audit-legal-shield" class="audit-card-val text-primary">Analyzing...</div>
             </div>
           </div>
@@ -398,7 +406,7 @@
             </div>
             <div class="appeal-actions">
               <button type="button" class="btn-copy" id="btn-copy-appeal">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
                   <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
                 </svg>
@@ -418,20 +426,20 @@
                 <span>Mandatory 15-day resolution window under IRDAI PPI Regulations.</span>
               </div>
             </div>
-            <div class="protocol-arrow">→</div>
+            <div class="protocol-arrow" aria-hidden="true">→</div>
             <div class="protocol-step">
               <div class="protocol-badge">Step 2</div>
               <div class="protocol-info">
                 <strong>IRDAI Bima Bharosa Portal</strong>
-                <span>File grievance ticket at bimabharosa.irdai.gov.in / 155255.</span>
+                <span>Lodge formal grievance at bimabharosa.irdai.gov.in / 155255.</span>
               </div>
             </div>
-            <div class="protocol-arrow">→</div>
+            <div class="protocol-arrow" aria-hidden="true">→</div>
             <div class="protocol-step">
               <div class="protocol-badge">Step 3</div>
               <div class="protocol-info">
                 <strong>Insurance Ombudsman</strong>
-                <span>Binding awards up to ₹50 Lakhs. No court fee. Final relief.</span>
+                <span>Binding awards up to ₹50,00,000 (₹50 Lakhs). Zero court fee.</span>
               </div>
             </div>
           </div>
@@ -455,32 +463,11 @@
     <!-- TAB 2: POLICY FINE-PRINT X-RAY -->
     <section id="tab-xray" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-xray">
 
-      <!-- One-Click Policy Presets -->
-      <div class="presets-section">
-        <div class="presets-header">
-          <span class="presets-label">⚡ 1-Click Policy Presets:</span>
-          <span class="presets-hint">Inspect real Indian policy terms, agent pitches, and brochures:</span>
-        </div>
-        <div class="presets-grid">
-          <button type="button" class="preset-card" data-xray-preset="preset-endowment">
-            <div class="preset-badge badge-danger">High Trap / Low IRR</div>
-            <div class="preset-title">"Guaranteed Income" Endowment / Money-Back Pitch</div>
-            <div class="preset-meta">Pay ₹1L/yr for 10 yrs → Get ₹25L after 20 yrs</div>
-          </button>
-
-          <button type="button" class="preset-card" data-xray-preset="preset-mediclaim-traps">
-            <div class="preset-badge badge-warning">Hidden Sub-Limits</div>
-            <div class="preset-title">Low-Cost Mediclaim with 1% Room Rent Cap</div>
-            <div class="preset-meta">₹5 Lakh Floater • 20% Co-pay for Senior Citizens</div>
-          </button>
-        </div>
-      </div>
-
       <!-- X-Ray Form Card -->
       <div class="card form-card">
         <div class="card-header">
           <div class="card-header-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" aria-hidden="true">
               <path d="M2 12h20M12 2v20"/>
               <circle cx="12" cy="12" r="10"/>
             </svg>
@@ -505,7 +492,7 @@
 
             <div class="form-group">
               <label for="xray-sum-insured">Sum Insured / Annual Premium (₹)</label>
-              <input type="text" id="xray-sum-insured" placeholder="e.g. ₹10 Lakhs Sum Insured / ₹1 Lakh Premium">
+              <input type="text" id="xray-sum-insured" placeholder="e.g. Annual Deposit: ₹1,00,000 / Advertised: ₹25 Lakhs">
             </div>
           </div>
 
@@ -515,7 +502,7 @@
               <button type="button" class="btn-clear-text" id="btn-clear-xray">Clear</button>
             </div>
             <textarea id="xray-text" rows="7" placeholder="Paste the policy terms, brochure excerpt, or agent pitch here. For example:
-'Special Jeevan Dhan Scheme: Pay just ₹1,00,000 yearly for 10 years and receive tax-free guaranteed ₹2,50,000 every year from 15th to 25th year with life cover of ₹10,00,000. Critical illness included after 90 days. Hospitalization room rent capped at 1% of Sum Insured...'" required></textarea>
+'EXCLUSIVE AGENT BROCHURE — Jeevan Dhan Samriddhi: Pay just ₹1,00,000 yearly for 10 years and receive tax-free guaranteed ₹25,00,000 on maturity with life cover of ₹10,00,000...'" required></textarea>
             <div class="textarea-footer">
               <span id="xray-char-count">0 characters</span>
               <span class="confidential-badge">🔒 100% Client-Side Scan</span>
@@ -626,7 +613,7 @@
             <span class="shield-badge">🛡️ Section 45 Immunity Roadmap</span>
           </div>
           <p class="step-desc">
-            To make your claim repudiation-proof under Section 45 of the Insurance Act 1938, declare these conditions and maintain these mandatory proofs:
+            To make your policy claim repudiation-proof under Section 45 of the Insurance Act 1938, declare these conditions upfront and maintain these mandatory proofs:
           </p>
 
           <div class="shield-grid">
@@ -660,7 +647,7 @@
       <div class="card architecture-card">
         <div class="card-header">
           <div class="card-header-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" aria-hidden="true">
               <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="16" y1="13" x2="8" y2="13"/>
@@ -773,7 +760,7 @@ Output strictly structured JSON matching the requested schema. Never provide mis
     <div class="container footer-inner">
       <div class="disclaimer-box">
         <div class="disclaimer-header">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" aria-hidden="true">
             <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
             <line x1="12" y1="9" x2="12" y2="13"/>
             <line x1="12" y1="17" x2="12.01" y2="17"/>
