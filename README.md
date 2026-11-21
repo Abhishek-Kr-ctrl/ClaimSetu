@@ -20,11 +20,19 @@ Ordinary policyholders face severe asymmetric disadvantages:
 3. **Ombudsman Avoidance**: Insurers rarely inform policyholders that they can escalate rejected claims **up to ₹50,00,000 (₹50 Lakhs)** to the **Council for Insurance Ombudsmen** with zero court fee, where decisions are legally binding on the insurance company.
 4. **Endowment / Money-Back Mis-selling**: Agents sell traditional endowment plans promising *"Triple Returns"* or *"Guaranteed 10x"*, while the real compounded post-tax Internal Rate of Return (IRR) is a sub-inflation **4.5% - 5.2% p.a.**
 
-**ClaimSetu** bridges this gap as an open-source, client-side legal-tech copilot designed to decode denials, expose fine-print traps, and draft statutory appeal letters for immediate escalation.
+**ClaimSetu** bridges this gap as an open-source, client-side legal-tech copilot designed to decode denials, expose fine-print traps, explain jargon simply, and draft statutory appeal letters for immediate escalation.
 
 ---
 
 ## 🚀 Key Modules & Capabilities
+
+### ⚡ 3-Step "How to Use" Orientation Strip
+- Positioned right below the header so first-time users immediately grasp the workflow:
+  1. **Step 1: Choose a Preset or Enter Details** — Pick one of 4 realistic Indian dispute presets or paste your own notice/brochure.
+  2. **Step 2: Watch the 3-Stage Regulatory Scan** — Real-time cross-examination against Section 45, IRDAI room-rent limits, and Ombudsman rulings.
+  3. **Step 3: Copy Letter & Escalate** — 1-click copy of the GRO appeal letter, checklist download, and Ombudsman roadmap up to ₹50 Lakhs.
+
+---
 
 ### 1. Rejection Decoder & Appeal Builder (Tab 1)
 - **Inputs**: Policy Type (*Health / Term Life / Motor / Gadget*), Disputed Claim Amount (₹), Insurer / TPA Name, Policy/Claim Number, and Rejection notice text.
@@ -34,6 +42,8 @@ Ordinary policyholders face severe asymmetric disadvantages:
   - **(b) Gap & Loophole Checklist**: Interactive counter-evidence checklist specifying exact medical records, hospital tariff certificates, doctor necessity attestations, and 3-year renewal records required to overturn the denial.
   - **(c) Statutory Escalation & Appeal Letter**: Generates a professional representation addressed to the **Grievance Redressal Officer (GRO)** of the insurer, invoking IRDAI’s mandatory 15-day redressal timeline, Section 45, and giving formal notice of escalation to the **IRDAI Bima Bharosa Portal** and the **Insurance Ombudsman**. Includes a 1-click **"Copy Appeal Letter"** button (with toast notification) and `.TXT` export.
 
+---
+
 ### 2. Policy Fine-Print X-Ray (Tab 2)
 - **Inputs**: Policy brochure text, Key Feature Document (KFD) excerpt, or agent WhatsApp pitch.
 - **Outputs**:
@@ -41,21 +51,38 @@ Ordinary policyholders face severe asymmetric disadvantages:
   - **(b) Hidden Trap Scanner**: Tags clauses with visual badges (**Safe**, **Watch Out**, **High Trap**) covering 1% room-rent caps, 20% senior citizen co-payment, 24-month specific illness waiting periods, modern treatment limits, surrender charges, and non-payable consumables haircuts.
   - **(c) Disclosure & Paperwork Shield**: Guides policyholders on which medical markers to declare upfront to guarantee future Section 45 immunity, plus a checklist of permanent records to retain for 10+ years.
 
-### 3. Dual Execution Modes
+---
+
+### 3. Jargon in Simple Words — Plain-English Term Helper (Tab 3)
+Calm, factual, 1-sentence explanations for the 8 core insurance terms that confuse Indian consumers:
+1. **Section 45 (3-Year Rule)**: Strict statutory bar on rejecting policies for alleged non-disclosure after 36 continuous months.
+2. **Room-Rent Sub-Limit & Proportionate Deduction**: Capping room charges and cutting doctor/surgery fees proportionately.
+3. **Co-Pay (Co-Payment)**: Fixed percentage of the bill (10%–20%) paid out of the policyholder's own pocket.
+4. **Waiting Period**: Compulsory initial window (30 days, 24 months, 36 months) before certain illnesses are covered.
+5. **Pure Protection vs. Money-Back/Endowment**: Insurance cover alone vs low-yield (~4.9% IRR) savings/return products.
+6. **GRO (Grievance Redressal Officer)**: Mandatory senior escalation official inside the insurer with a 15-day resolution window.
+7. **IRDAI Bima Bharosa**: Official regulatory complaint portal (`bimabharosa.irdai.gov.in` / 155255) for regulator tracking.
+8. **Insurance Ombudsman (≤ ₹50 Lakhs)**: Free, legally binding quasi-judicial forum for eligible claims up to ₹50 Lakhs.
+
+---
+
+### 4. Dual Execution Modes
 - **Instant Demo Mode (Default, Zero API Key Needed)**:
   - Runs 100% locally with pre-engineered Indian insurance regulatory intelligence.
   - Features a **Master 1-Click Preset Showcase** with **4 accessible Indian presets** that run end-to-end with the animated 3-stage progress bar:
-    1. **Preset 1**: *Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition (₹2,40,000)* [Cardiac stent repudiation past 3-year contestability].
-    2. **Preset 2**: *Partial Settlement — Room-Rent Sub-Limit & Non-Payable Items Deduction (₹1,15,000)* [1% room cap & consumables haircut].
-    3. **Preset 3**: *Claim Rejected — Missing Itemized Bill & Discharge Summary Gap (₹85,000)* [Emergency dengue hospitalization file closure].
-    4. **Preset 4**: *Policy Brochure Audit — "Tax-Saver + Guaranteed Return + Cover" Pitch* [Exposed sub-inflation 4.9% real IRR & underinsurance].
+    1. **Preset 1**: *Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition (₹2,40,000)* [Loads into Tab 1 • Tests Section 45 protection].
+    2. **Preset 2**: *Partial Settlement — Room-Rent Sub-Limit & Non-Payable Items Deduction (₹1,15,000)* [Loads into Tab 1 • Tests proportionate deduction overreach].
+    3. **Preset 3**: *Claim Rejected — Missing Itemized Bill & Discharge Summary Gap (₹85,000)* [Loads into Tab 1 • Tests procedural document closure].
+    4. **Preset 4**: *Policy Brochure Audit — "Tax-Saver + Guaranteed Return + Cover" Pitch* [Loads into Tab 2 • Tests pure protection vs savings].
   - Features an animated **3-stage progress pipeline** tracking statutory analysis stages.
 - **Live Gemini AI Mode (Optional BYOK)**:
   - Enter your personal Google Gemini API key to query `gemini-2.5-flash` directly.
   - Stored strictly in browser `localStorage` (`claimsetu_gemini_key`), never sent to any third-party server.
   - Automatic error handling with seamless fallback to the local engine if rate-limited, empty, or offline.
 
-### 4. Transparent Prompt & Legal Architecture
+---
+
+### 5. Transparent Prompt & Legal Architecture (Tab 4)
 - Expandable tab showcasing system prompt design, regulatory grounding table, and zero-telemetry client-side privacy architecture.
 
 ---
@@ -85,7 +112,7 @@ ClaimSetu/
 ```
 
 - **Zero NPM / Node dependencies** (No `node_modules`, no webpack/vite build step).
-- **Total Payload Size**: ~150 KB (well below the 10 MB limit).
+- **Total Payload Size**: ~160 KB (well below the 10 MB limit).
 - **100% Client-Side Privacy**: Runs in the browser. Medical records and API keys never touch any intermediary server.
 - **Responsive & No Horizontal Overflow**: Fits cleanly on mobile, tablet, and desktop viewports without clipping or horizontal scrollbars.
 

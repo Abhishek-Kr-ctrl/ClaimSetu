@@ -19,7 +19,7 @@
     <div class="header-inner container">
       <div class="brand-block">
         <div class="brand-logo">
-          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="40" height="40" rx="10" fill="#0F172A"/>
             <path d="M20 6L32 11.5V19.5C32 27 26.8 33.8 20 36C13.2 33.8 8 27 8 19.5V11.5L20 6Z" fill="#1E293B" stroke="#F97316" stroke-width="2.2" stroke-linejoin="round"/>
             <path d="M14 20L18 24L26 15" stroke="#10B981" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,7 +30,7 @@
           <div class="brand-title-wrap">
             <h1 class="brand-title">ClaimSetu</h1>
             <span class="brand-tag">क्लेमसेतु</span>
-            <span class="version-badge">v2.5 IRDAI-Aligned</span>
+            <span class="version-badge">IRDAI-Aligned Copilot</span>
           </div>
           <p class="brand-subtitle">AI Insurance Policy Decoder &amp; Claim Appeal Copilot for India</p>
         </div>
@@ -39,7 +39,7 @@
       <!-- Mode & BYOK Controls -->
       <div class="header-controls">
         <div class="mode-selector" role="radiogroup" aria-label="Engine Execution Mode">
-          <button type="button" class="mode-pill active" id="btn-mode-demo" aria-pressed="true" title="Zero API key needed. Runs 100% locally with high-fidelity Indian regulatory presets.">
+          <button type="button" class="mode-pill active" id="btn-mode-demo" aria-pressed="true" title="Runs 100% locally with pre-engineered Indian regulatory presets. Zero API key needed.">
             <span class="mode-dot dot-demo"></span>
             Instant Demo Mode
           </button>
@@ -108,11 +108,47 @@
   <!-- Main Application Body -->
   <main class="main-content container">
 
+    <!-- 3-STEP "HOW TO USE" QUICK ORIENTATION STRIP -->
+    <section class="how-to-use-strip" aria-label="How to Use ClaimSetu in 3 Simple Steps">
+      <div class="how-to-use-header">
+        <div class="how-to-use-tag-wrap">
+          <span class="pulse-dot"></span>
+          <span class="how-to-use-tag">How ClaimSetu Works for You</span>
+        </div>
+        <span class="how-to-use-subtitle">Overturn unfair claim repudiations or decode policy fine-print in 3 straightforward steps:</span>
+      </div>
+      <div class="how-to-use-grid">
+        <div class="how-to-use-card">
+          <div class="step-circle">1</div>
+          <div class="step-text-wrap">
+            <strong class="step-title">Choose a Preset or Enter Details</strong>
+            <p class="step-desc">Pick one of our 4 realistic Indian dispute presets below, or paste your actual claim rejection letter or policy brochure.</p>
+          </div>
+        </div>
+
+        <div class="how-to-use-card">
+          <div class="step-circle">2</div>
+          <div class="step-text-wrap">
+            <strong class="step-title">Watch 3-Stage Regulatory Scan</strong>
+            <p class="step-desc">ClaimSetu audits clauses against Section 45 indisputability, IRDAI room-rent limits, and Ombudsman rulings in real-time.</p>
+          </div>
+        </div>
+
+        <div class="how-to-use-card">
+          <div class="step-circle">3</div>
+          <div class="step-text-wrap">
+            <strong class="step-title">Copy Letter &amp; Escalate</strong>
+            <p class="step-desc">Copy your formal Grievance Redressal Officer (GRO) appeal letter, review the missing document checklist, and escalate up to ₹50 Lakhs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MASTER 4-PRESET QUICK SHOWCASE BANNER -->
     <section class="master-presets-banner" aria-label="One-Click Indian Dispute Presets">
       <div class="presets-header">
         <div class="presets-title-wrap">
-          <span class="presets-label">⚡ 1-Click Indian Presets:</span>
+          <span class="presets-label">⚡ 1-Click Indian Showcase Presets:</span>
           <span class="presets-hint">Click any preset to automatically load and execute the 3-stage statutory pipeline:</span>
         </div>
       </div>
@@ -121,24 +157,28 @@
           <div class="preset-badge badge-danger">Section 45 Protection</div>
           <div class="preset-title">Preset 1: Health Claim Denied — Alleged Non-Disclosure of Pre-Existing Condition</div>
           <div class="preset-meta">Disputed: ₹2,40,000 • Cardiac Stent Repudiation past 3-Yr Contestability</div>
+          <div class="preset-helper-note">Loads into Tab 1 • Tests 3-Year Indisputability Rule</div>
         </button>
 
         <button type="button" class="preset-card" data-preset-action="preset-2" title="Preset 2: Room-Rent Sub-Limit & Non-Payable Items Deduction (₹1,15,000)">
           <div class="preset-badge badge-warning">Proportionate Deduction</div>
           <div class="preset-title">Preset 2: Partial Settlement — Room-Rent Sub-Limit &amp; Non-Payable Items Deduction</div>
           <div class="preset-meta">Disputed: ₹1,15,000 • 1% Room Cap &amp; Consumables Haircut</div>
+          <div class="preset-helper-note">Loads into Tab 1 • Tests Proportionate Deduction Overreach</div>
         </button>
 
         <button type="button" class="preset-card" data-preset-action="preset-3" title="Preset 3: Missing Itemized Bill & Discharge Summary Gap (₹85,000)">
           <div class="preset-badge badge-info">Documentation Gap</div>
           <div class="preset-title">Preset 3: Claim Rejected — Missing Itemized Bill &amp; Discharge Summary Gap</div>
           <div class="preset-meta">Disputed: ₹85,000 • Emergency Dengue Case Closure</div>
+          <div class="preset-helper-note">Loads into Tab 1 • Tests Procedural File Closure Defense</div>
         </button>
 
         <button type="button" class="preset-card" data-preset-action="preset-4" title="Preset 4: Policy Brochure Audit — Tax-Saver + Guaranteed Return + Cover Pitch">
           <div class="preset-badge badge-teal">Hidden Trap Scanner</div>
           <div class="preset-title">Preset 4: Policy Brochure Audit — "Tax-Saver + Guaranteed Return + Cover" Pitch</div>
           <div class="preset-meta">Deposit: ₹1L/yr • Exposed Sub-Inflation IRR (~4.9%) &amp; Underinsurance</div>
+          <div class="preset-helper-note">Loads into Tab 2 • Tests Pure Cover vs. Low-Yield Savings</div>
         </button>
       </div>
     </section>
@@ -168,6 +208,19 @@
         <span class="tab-sub">Uncover Hidden Traps, Room-Rent Caps &amp; Real IRR (Preset 4)</span>
       </button>
 
+      <button type="button" class="tab-button" id="tab-btn-terms" role="tab" aria-selected="false" aria-controls="tab-terms">
+        <span class="tab-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <line x1="9" y1="7" x2="15" y2="7"/>
+            <line x1="9" y1="11" x2="13" y2="11"/>
+          </svg>
+        </span>
+        <span class="tab-title">3. Jargon in Simple Words</span>
+        <span class="tab-sub">Plain-English Term Helper (Sec 45, Co-Pay, GRO, Ombudsman)</span>
+      </button>
+
       <button type="button" class="tab-button" id="tab-btn-architecture" role="tab" aria-selected="false" aria-controls="tab-architecture">
         <span class="tab-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -175,12 +228,14 @@
             <polyline points="8 6 2 12 8 18"/>
           </svg>
         </span>
-        <span class="tab-title">Prompt &amp; Legal Architecture</span>
-        <span class="tab-sub">IRDAI Rules, Contestability &amp; Prompt Chains</span>
+        <span class="tab-title">4. Prompt &amp; Legal Architecture</span>
+        <span class="tab-sub">IRDAI Rules, Contestability &amp; System Prompts</span>
       </button>
     </nav>
 
-    <!-- TAB 1: REJECTION DECODER & APPEAL BUILDER -->
+    <!-- ===================================================================
+         TAB 1: REJECTION DECODER & APPEAL BUILDER
+         =================================================================== -->
     <section id="tab-rejection" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-rejection">
 
       <!-- Form Card -->
@@ -197,7 +252,7 @@
           </div>
           <div>
             <h2 class="card-title">Claim Dispute Details</h2>
-            <p class="card-desc">Enter your claim parameters and paste the rejection letter, deduction summary, or TPA notice.</p>
+            <p class="card-desc">Enter your claim parameters and paste the rejection letter, deduction summary, or TPA notice received from your insurer.</p>
           </div>
         </div>
 
@@ -460,7 +515,9 @@
       </div>
     </section>
 
-    <!-- TAB 2: POLICY FINE-PRINT X-RAY -->
+    <!-- ===================================================================
+         TAB 2: POLICY FINE-PRINT X-RAY
+         =================================================================== -->
     <section id="tab-xray" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-xray">
 
       <!-- X-Ray Form Card -->
@@ -642,7 +699,246 @@
       </div>
     </section>
 
-    <!-- TAB 3: PROMPT ARCHITECTURE & STATUTORY GROUNDING -->
+    <!-- ===================================================================
+         TAB 3: JARGON IN SIMPLE WORDS (PLAIN-ENGLISH TERM HELPER)
+         =================================================================== -->
+    <section id="tab-terms" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-terms">
+      <div class="card terms-helper-card">
+        <div class="card-header">
+          <div class="card-header-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <line x1="9" y1="7" x2="15" y2="7"/>
+              <line x1="9" y1="11" x2="13" y2="11"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="card-title">Jargon in Simple Words (Plain-English Term Helper)</h2>
+            <p class="card-desc">Insurance policies are filled with confusing legal and medical terms. Here is what they actually mean for your money and claims in everyday language.</p>
+          </div>
+        </div>
+
+        <!-- Quick Filter Chips -->
+        <div class="terms-filter-bar">
+          <span class="terms-filter-label">Quick Jump:</span>
+          <div class="terms-chip-list">
+            <button type="button" class="term-chip active" data-term-filter="all">All Terms (8)</button>
+            <button type="button" class="term-chip" data-term-filter="claims">Claim Disputes (4)</button>
+            <button type="button" class="term-chip" data-term-filter="escalation">Escalation &amp; Law (4)</button>
+          </div>
+        </div>
+
+        <!-- 8 Core Plain-English Term Cards -->
+        <div class="terms-grid">
+
+          <!-- 1. Section 45 -->
+          <div class="term-card" data-term-category="escalation">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-danger">Statutory Protection</span>
+                <h3 class="term-name">1. Section 45 (The 3-Year Indisputability Rule)</h3>
+              </div>
+              <span class="term-statute">Insurance Act, 1938</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>Once your insurance policy has been active for <strong>3 continuous years (36 months)</strong>, the insurer is legally barred from canceling your policy or rejecting a claim by alleging you hid or forgot to mention past diabetes, high blood pressure, or lifestyle habits.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>Makes older policies virtually dispute-proof against "pre-existing disease non-disclosure" repudiations.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>Always maintain proof of continuous renewal receipts from Year 1 to prove you have crossed the 36-month threshold.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Room-Rent Sub-Limit / Proportionate Deduction -->
+          <div class="term-card" data-term-category="claims">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-warning">Hidden Out-of-Pocket</span>
+                <h3 class="term-name">2. Room-Rent Sub-Limit &amp; Proportionate Deduction</h3>
+              </div>
+              <span class="term-statute">IRDAI Health Master Circular</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>If your policy limits your room rent to 1% (e.g., ₹3,000/day) and you pick a ₹6,000/day room, the insurer cuts not just the room rent difference, but also slashes your <strong>doctor fees, surgeon charges, and operation theater bill by 50%</strong>!</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>Can wipe out 40%–60% of your claim reimbursement, leaving you with huge out-of-pocket hospital bills.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>Always opt for a policy with "No Room Rent Capping" or demand that the hospital certify doctor fees were uniform across room classes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Co-Pay (Co-Payment) -->
+          <div class="term-card" data-term-category="claims">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-warning">Mandatory Cost Sharing</span>
+                <h3 class="term-name">3. Co-Payment (Co-Pay)</h3>
+              </div>
+              <span class="term-statute">Policy Clause</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>A fixed percentage of every single medical bill (e.g., <strong>10% or 20%</strong>) that YOU must pay from your own pocket, no matter what treatment or hospital room you choose.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>On a ₹5,00,000 hospital bill with a 20% co-pay, you must pay ₹1,00,000 yourself before the insurer pays a single rupee.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>Check if a co-pay waiver rider is available, especially for senior citizen parents, to prevent recurring deduction shocks.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Waiting Period -->
+          <div class="term-card" data-term-category="claims">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-info">Coverage Delay</span>
+                <h3 class="term-name">4. Waiting Period (Initial, Specific Illness, PED)</h3>
+              </div>
+              <span class="term-statute">IRDAI Moratorium Guidelines</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>The compulsory period you must wait after buying a policy before specific illnesses are covered: <strong>30 days</strong> for general illness, <strong>24 months</strong> for planned surgeries (cataract, hernia, stones), and up to <strong>36 months</strong> for Pre-Existing Diseases (PED).</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>Any non-accidental claim made during the waiting window is automatically rejected under standard policy exclusions.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>Keep your health policy continuously renewed without break so your waiting periods do not reset to zero.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Pure Protection vs. Money-Back / Endowment -->
+          <div class="term-card" data-term-category="claims">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-teal">Financial Reality Check</span>
+                <h3 class="term-name">5. Pure Protection vs. Money-Back / Endowment</h3>
+              </div>
+              <span class="term-statute">Product Structure</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p><strong>"Pure Protection" (Term Life)</strong> gives a huge financial safety net (e.g. ₹1 Crore cover for ~₹10,000/yr) if you pass away. <strong>"Money-Back/Endowment"</strong> mixes life cover with low-yield savings, giving a tiny cover (₹10 Lakhs) and returning only ~4.5%–5% annual interest.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Money:</strong>
+                <p>Traditional endowment plans lose value to inflation. Buying Pure Term + investing the difference in PPF or Mutual Funds yields <strong>3x to 5x higher wealth</strong> with 10x higher life cover.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>Never treat insurance as an investment. Keep your life protection and investments strictly separate.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. GRO (Grievance Redressal Officer) -->
+          <div class="term-card" data-term-category="escalation">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-primary">Internal Escalation</span>
+                <h3 class="term-name">6. GRO (Grievance Redressal Officer)</h3>
+              </div>
+              <span class="term-statute">IRDAI PPI Regulations, 2024</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>The designated senior complaints officer inside every insurance company who is legally mandated by IRDAI to re-examine rejected claims within <strong>15 calendar days</strong>.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>Writing a formal legal representation to the GRO is the compulsory Step 1 before you can approach the Insurance Ombudsman.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>Send your appeal letter directly to the GRO via registered email and Speed Post to start the statutory 15-day resolution clock.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. IRDAI Bima Bharosa -->
+          <div class="term-card" data-term-category="escalation">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-primary">Regulator Tracking</span>
+                <h3 class="term-name">7. IRDAI Bima Bharosa Portal</h3>
+              </div>
+              <span class="term-statute">bimabharosa.irdai.gov.in</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>The official government online complaint tracking portal operated by the Insurance Regulatory and Development Authority of India (IRDAI) at <code>bimabharosa.irdai.gov.in</code> (Toll-Free: <strong>155255</strong>).</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>Registers an official regulatory grievance ticket against the insurer if the GRO ignores or delays your 15-day appeal window.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>If the GRO does not settle your claim in 15 days, immediately register your token on Bima Bharosa for regulatory oversight.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Insurance Ombudsman -->
+          <div class="term-card" data-term-category="escalation">
+            <div class="term-card-header">
+              <div class="term-title-wrap">
+                <span class="term-badge badge-success">Free &amp; Binding Relief</span>
+                <h3 class="term-name">8. Insurance Ombudsman (Claims up to ₹50 Lakhs)</h3>
+              </div>
+              <span class="term-statute">Insurance Ombudsman Rules, 2017</span>
+            </div>
+            <div class="term-body">
+              <div class="term-row">
+                <strong class="term-row-label">💬 In Simple Words:</strong>
+                <p>A quasi-judicial statutory dispute forum set up by the Government of India. It charges <strong>zero fees</strong>, requires <strong>no lawyers</strong>, and its awards are <strong>legally binding on the insurance company</strong> for claims up to ₹50,00,000 (₹50 Lakhs).</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">💰 Impact on Your Claim:</strong>
+                <p>The single most powerful, cost-free mechanism to overturn unfair rejections without enduring years of Consumer Court litigation.</p>
+              </div>
+              <div class="term-row">
+                <strong class="term-row-label">🛡️ What You Should Do:</strong>
+                <p>File your complaint with your regional Ombudsman office (cioins.co.in) within 1 year of the GRO rejection or non-response.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 4: PROMPT ARCHITECTURE & STATUTORY GROUNDING
+         =================================================================== -->
     <section id="tab-architecture" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-architecture">
       <div class="card architecture-card">
         <div class="card-header">
@@ -761,7 +1057,7 @@ Output strictly structured JSON matching the requested schema. Never provide mis
       <div class="disclaimer-box">
         <div class="disclaimer-header">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" aria-hidden="true">
-            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 0-3.42 0z"/>
             <line x1="12" y1="9" x2="12" y2="13"/>
             <line x1="12" y1="17" x2="12.01" y2="17"/>
           </svg>

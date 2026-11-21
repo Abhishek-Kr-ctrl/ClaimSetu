@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const state = {
     mode: 'demo', // 'demo' | 'gemini'
-    activeTab: 'rejection', // 'rejection' | 'xray' | 'architecture'
+    activeTab: 'rejection', // 'rejection' | 'xray' | 'terms' | 'architecture'
     geminiApiKey: localStorage.getItem('claimsetu_gemini_key') || '',
     lastRejectionData: null,
     lastXrayData: null
@@ -35,9 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Nav Tabs
     tabBtnRejection: document.getElementById('tab-btn-rejection'),
     tabBtnXray: document.getElementById('tab-btn-xray'),
+    tabBtnTerms: document.getElementById('tab-btn-terms'),
     tabBtnArchitecture: document.getElementById('tab-btn-architecture'),
     tabPanelRejection: document.getElementById('tab-rejection'),
     tabPanelXray: document.getElementById('tab-xray'),
+    tabPanelTerms: document.getElementById('tab-terms'),
     tabPanelArchitecture: document.getElementById('tab-architecture'),
 
     // Rejection Form & Inputs
@@ -199,7 +201,7 @@ Plan Features:
     }
   };
 
-  // Aliases for any legacy or alternative dataset attributes
+  // Aliases for any alternative selectors
   PRESETS['preset-ped'] = PRESETS['preset-1'];
   PRESETS['preset-roomrent'] = PRESETS['preset-2'];
   PRESETS['preset-motor'] = PRESETS['preset-3'];
@@ -332,33 +334,43 @@ Plan Features:
   }
 
   // ==========================================
-  // 6. TAB SWITCHING
+  // 6. TAB SWITCHING (4 TABS)
   // ==========================================
   function switchTab(targetTabName) {
     const tabs = [
       { btn: elements.tabBtnRejection, panel: elements.tabPanelRejection, name: 'rejection' },
       { btn: elements.tabBtnXray, panel: elements.tabPanelXray, name: 'xray' },
+      { btn: elements.tabBtnTerms, panel: elements.tabPanelTerms, name: 'terms' },
       { btn: elements.tabBtnArchitecture, panel: elements.tabPanelArchitecture, name: 'architecture' }
     ];
 
     tabs.forEach(t => {
       if (t.name === targetTabName) {
-        t.btn.classList.add('active');
-        t.btn.setAttribute('aria-selected', 'true');
-        t.panel.classList.remove('hidden');
+        if (t.btn) {
+          t.btn.classList.add('active');
+          t.btn.setAttribute('aria-selected', 'true');
+        }
+        if (t.panel) {
+          t.panel.classList.remove('hidden');
+        }
       } else {
-        t.btn.classList.remove('active');
-        t.btn.setAttribute('aria-selected', 'false');
-        t.panel.classList.add('hidden');
+        if (t.btn) {
+          t.btn.classList.remove('active');
+          t.btn.setAttribute('aria-selected', 'false');
+        }
+        if (t.panel) {
+          t.panel.classList.add('hidden');
+        }
       }
     });
     state.activeTab = targetTabName;
   }
 
   function initTabs() {
-    elements.tabBtnRejection.addEventListener('click', () => switchTab('rejection'));
-    elements.tabBtnXray.addEventListener('click', () => switchTab('xray'));
-    elements.tabBtnArchitecture.addEventListener('click', () => switchTab('architecture'));
+    if (elements.tabBtnRejection) elements.tabBtnRejection.addEventListener('click', () => switchTab('rejection'));
+    if (elements.tabBtnXray) elements.tabBtnXray.addEventListener('click', () => switchTab('xray'));
+    if (elements.tabBtnTerms) elements.tabBtnTerms.addEventListener('click', () => switchTab('terms'));
+    if (elements.tabBtnArchitecture) elements.tabBtnArchitecture.addEventListener('click', () => switchTab('architecture'));
 
     // Accordions in Architecture tab
     document.querySelectorAll('.accordion-header').forEach(header => {
@@ -366,6 +378,28 @@ Plan Features:
         const item = header.closest('.accordion-item');
         const isOpen = item.classList.toggle('open');
         header.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  }
+
+  // Term Helper Filter Chips (Tab 3)
+  function initTermChips() {
+    const chips = document.querySelectorAll('.term-chip');
+    const cards = document.querySelectorAll('.term-card');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const filter = chip.dataset.termFilter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.termCategory === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
   }
@@ -383,7 +417,6 @@ Plan Features:
       document.getElementById(`${stagePrefix}-3`)
     ];
 
-    // Reset stages
     stageItems.forEach(el => {
       if (el) el.className = 'stage-item';
     });
@@ -1357,5 +1390,6 @@ ${text}`;
   initByok();
   initTabs();
   initPresets();
+  initTermChips();
   updateAmountInWords();
 });

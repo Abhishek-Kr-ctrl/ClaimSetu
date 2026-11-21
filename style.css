@@ -24,7 +24,7 @@
   --text-dim: #64748B;
   --text-inverse: #0F172A;
 
-  /* Accent Colors (Indian Flag Tri-tone Inspiration + High Tech) */
+  /* Accent Colors */
   --saffron: #F97316;
   --saffron-hover: #EA580C;
   --saffron-glow: rgba(249, 115, 22, 0.2);
@@ -83,7 +83,7 @@ body {
 /* Container */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 1.25rem;
   box-sizing: border-box;
@@ -461,7 +461,7 @@ body {
 .ticker-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -490,15 +490,123 @@ body {
 /* Main Content Area */
 .main-content {
   flex: 1;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   padding-bottom: 3.5rem;
+}
+
+/* ===================================================================
+   3-STEP "HOW TO USE" QUICK ORIENTATION STRIP
+   =================================================================== */
+.how-to-use-strip {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.85) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.how-to-use-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.how-to-use-tag-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--blue-brand);
+  box-shadow: 0 0 6px var(--blue-brand);
+  animation: pulseDot 1.2s infinite alternate;
+}
+
+.how-to-use-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--blue-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.how-to-use-subtitle {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.how-to-use-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.how-to-use-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.how-to-use-card:hover {
+  border-color: var(--blue-brand);
+  background: var(--bg-card-hover);
+}
+
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.2);
+  color: var(--blue-brand);
+  border: 1.5px solid var(--blue-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.step-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.step-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
 }
 
 /* ===================================================================
    MASTER 4-PRESET SHOWCASE BANNER
    =================================================================== */
 .master-presets-banner {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%);
   border: 1px solid rgba(249, 115, 22, 0.35);
   border-radius: var(--radius-lg);
   padding: 1.15rem 1.25rem;
@@ -523,7 +631,7 @@ body {
 }
 
 .presets-label {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 800;
   color: var(--saffron);
   letter-spacing: -0.01em;
@@ -536,7 +644,7 @@ body {
 
 .presets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 0.75rem;
 }
 
@@ -550,7 +658,7 @@ body {
   transition: all var(--transition-fast);
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
   position: relative;
   font-family: inherit;
   width: 100%;
@@ -581,13 +689,23 @@ body {
   font-family: var(--font-mono);
 }
 
+.preset-helper-note {
+  font-size: 0.72rem;
+  color: var(--blue-brand);
+  font-weight: 600;
+  margin-top: 0.15rem;
+  padding-top: 0.25rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
 /* Badges */
 .preset-badge,
 .badge-warning,
 .badge-danger,
 .badge-info,
 .badge-success,
-.badge-teal {
+.badge-teal,
+.badge-primary {
   display: inline-block;
   align-self: flex-start;
   font-size: 0.68rem;
@@ -628,10 +746,18 @@ body {
   border: 1px solid rgba(20, 184, 166, 0.3);
 }
 
-/* Navigation Tabs */
+.badge-primary {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--purple-brand);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* ===================================================================
+   NAVIGATION TABS (4 TABS)
+   =================================================================== */
 .nav-tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
   margin-bottom: 1.75rem;
 }
@@ -640,7 +766,7 @@ body {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   color: var(--text-muted);
-  padding: 1rem 1.15rem;
+  padding: 0.9rem 1rem;
   border-radius: var(--radius-lg);
   cursor: pointer;
   text-align: left;
@@ -678,18 +804,19 @@ body {
 
 .tab-icon {
   color: var(--saffron);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
   display: inline-flex;
 }
 
 .tab-title {
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 .tab-sub {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   line-height: 1.3;
 }
@@ -1546,7 +1673,6 @@ textarea {
 /* ===================================================================
    TAB 2: POLICY FINE-PRINT X-RAY STYLES
    =================================================================== */
-
 .reality-check-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1735,9 +1861,147 @@ textarea {
 }
 
 /* ===================================================================
-   TAB 3: PROMPT ARCHITECTURE & ACCORDION
+   TAB 3: JARGON IN SIMPLE WORDS (PLAIN-ENGLISH TERM HELPER)
    =================================================================== */
+.terms-helper-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 
+.terms-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.terms-filter-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.terms-chip-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.term-chip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.term-chip:hover {
+  color: var(--text-main);
+  border-color: var(--border-light);
+}
+
+.term-chip.active {
+  background: var(--emerald);
+  color: #FFFFFF;
+  border-color: var(--emerald);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.term-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.term-card:hover {
+  border-color: var(--emerald);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.term-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.65rem;
+}
+
+.term-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.term-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.term-statute {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  background: var(--bg-main);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.term-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.term-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.term-row-label {
+  font-size: 0.78rem;
+  color: var(--emerald);
+  font-weight: 700;
+}
+
+.term-row p {
+  color: var(--text-muted);
+}
+
+.term-row p strong {
+  color: var(--text-main);
+}
+
+/* ===================================================================
+   TAB 4: PROMPT ARCHITECTURE & ACCORDION
+   =================================================================== */
 .architecture-card {
   display: flex;
   flex-direction: column;
@@ -1944,9 +2208,14 @@ textarea {
 /* ===================================================================
    Responsive Media Queries — Strict Overflow Prevention
    =================================================================== */
+@media (max-width: 1040px) {
+  .nav-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 860px) {
-  .nav-tabs {
+  .how-to-use-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1954,6 +2223,10 @@ textarea {
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
+  }
+
+  .nav-tabs {
+    grid-template-columns: 1fr;
   }
 
   .form-row-three,
@@ -1989,6 +2262,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+
   .brand-title {
     font-size: 1.25rem;
   }
@@ -2011,6 +2288,7 @@ textarea {
 
   .app-header,
   .nav-tabs,
+  .how-to-use-strip,
   .master-presets-banner,
   .form-card,
   .progress-box,
