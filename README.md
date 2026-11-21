@@ -219,3 +219,10 @@ Deploy ClaimSetu for free on [Render](https://render.com) in under 60 seconds:
 
 - **Static & Security Check (`verify-claimsetu.js`)**: Verifies that `index.html`, `style.css`, `script.js`, and `README.md` exist and are non-empty, checks core features (**Rejection Decoder**, **Policy Fine-Print X-Ray**, **Insurance Ombudsman up to ₹50,00,000**, and `gemini-2.5-flash` via browser `localStorage`), and ensures no hardcoded API keys (`AIza...`) are present in source files.
 - **Browser Verification**: Open the live deployment URL, check browser DevTools Console for zero runtime errors, and test both tabs, all 4 presets in **Instant Demo Mode**, and plain-language jargon terms.
+
+---
+
+## Running Tests
+Run the test suite with Node.js:
+```bash
+npm test
